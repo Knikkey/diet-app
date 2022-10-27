@@ -1,17 +1,26 @@
 :root {
   --box-shadow: 1px 2px 8px #999;
+  --box-shadow--light: 1px 2px 8px #bbb;
 }
 
-.form {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1rem;
-  font-size: 1.6rem;
-  padding: 2rem;
+.calc-container {
+  padding: 1rem 2rem 2rem;
   margin: 2rem;
   width: fit-content;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
+}
+.calc-container h1 {
+  text-align: center;
+  font-size: 4.8rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
 }
 .form input::-webkit-outer-spin-button,
 .form input::-webkit-inner-spin-button {
@@ -19,10 +28,40 @@
   margin: 0;
 }
 .form input[type=number] {
-  appearance: textfield;
+  grid-column: 2/span 2;
+  font-size: inherit;
+  padding: 0.4rem 0.8rem;
 }
-
-.radio-container {
+.form .radio-container {
   display: flex;
   justify-content: space-between;
+  grid-column: 2/-1;
+}
+.form button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow--light);
+  padding: 1rem 2rem;
+  font-size: inherit;
+  margin: 1rem auto 0;
+  grid-column: 1/-1;
+}
+.form .span1 {
+  grid-column: span 1 !important;
+}
+.form .inches {
+  grid-column: span 1 !important;
+}
+.form .span1,
+.form .inches {
+  max-width: 10rem;
+}
+.form .sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }/*# sourceMappingURL=Calculator.module.css.map */
