@@ -3,6 +3,7 @@ export default function FormElements(props) {
     <>
       <label htmlFor={props.label}>{props.label}:</label>
       <input
+        required
         id={props.label}
         type={props.type}
         placeholder={props.placeholder}

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef, useContext } from "react";
+import { ValuesContext } from "../../context/ValuesContext";
 import FormElements from "../../components/FormElements";
 import Radio from "../../components/Radio";
 
@@ -12,6 +13,10 @@ export default function Calculator() {
   const [age, setAge] = useState("");
   const [sex, setSex] = useState("");
 
+  const { bmrState, setBmrState } = useContext(ValuesContext);
+
+  const results = useRef();
+
   const unitHandler = (e) => {
     setUnits(e.target.value);
   };
@@ -22,20 +27,28 @@ export default function Calculator() {
     let BMR;
 
     if (units === "metric") {
-      BMR = Math.round(
-        10 * weight + 6.25 * height - 5 * age + (sex === "male" ? 5 : -161)
-      );
+      BMR =
+        Math.round(
+          (10 * weight +
+            6.25 * height -
+            5 * age +
+            (sex === "male" ? 5 : -161)) /
+            100
+        ) * 100;
     }
     if (units !== "metric") {
-      BMR = Math.round(
-        10 * (weight / 2.2) +
-          6.25 * ((height * 12 + Number(heightInches)) * 2.54) -
-          5 * age +
-          (sex === "male" ? 5 : -161)
-      );
+      BMR =
+        Math.round(
+          (10 * (weight / 2.2) +
+            6.25 * ((height * 12 + Number(heightInches)) * 2.54) -
+            5 * age +
+            (sex === "male" ? 5 : -161)) /
+            100
+        ) * 100;
     }
 
-    console.log(BMR);
+    setBmrState(BMR);
+    results.current.classList.add(styles["bmr-container--visable"]);
   };
 
   return (
@@ -104,6 +117,11 @@ export default function Calculator() {
         ></Radio>
         <button type="submit">Calculate</button>
       </form>
+      <div ref={results} className={styles["bmr-container"]}>
+        <span className={styles["result-message"]}>
+          Your estimated BMR is <span>{bmrState}</span>
+        </span>
+      </div>
     </div>
   );
 }

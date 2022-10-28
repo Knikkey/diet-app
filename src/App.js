@@ -1,10 +1,10 @@
 import "./App.css";
-import Calculator from "./pages/calculator/Calculator";
+import Bmr from "./pages/Bmr/Bmr";
 
 function App() {
   return (
     <div className="App">
-      <Calculator />
+      <Bmr />
     </div>
   );
 }
