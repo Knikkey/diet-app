@@ -3,7 +3,7 @@ import { ValuesContext } from "../../context/ValuesContext";
 import FormElements from "../../components/FormElements";
 import Radio from "../../components/Radio";
 
-import styles from "./Calculator.module.css";
+import styles from "./styles/BmrCalculator.module.css";
 
 export default function Calculator() {
   const [units, setUnits] = useState("metric");

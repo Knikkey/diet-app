@@ -1,7 +1,7 @@
 import BmrCalculator from "./BmrCalculator";
 import BmrText from "./BmrText";
 
-import styles from "./Bmr.module.css";
+import styles from "./styles/Bmr.module.css";
 
 export default function Bmr() {
   return (

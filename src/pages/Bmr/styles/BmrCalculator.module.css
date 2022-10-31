@@ -1,11 +1,13 @@
 :root {
   --box-shadow: 1px 2px 8px #999;
   --box-shadow--light: 1px 2px 8px #bbb;
+  --transparent: rgba(0, 0, 0, 0);
 }
 
 .calc-container {
   padding: 1rem 2rem 2rem;
   width: fit-content;
+  height: fit-content;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
 }
@@ -85,4 +87,4 @@
   color: blue;
   font-size: 2.8rem;
   font-weight: bold;
-}/*# sourceMappingURL=Calculator.module.css.map */
+}/*# sourceMappingURL=BmrCalculator.module.css.map */

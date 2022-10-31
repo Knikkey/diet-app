@@ -1,15 +1,11 @@
 import { useContext } from "react";
 import { ValuesContext } from "../../context/ValuesContext";
+import ImagesRep from "./ImagesRep";
 
-import styles from "./BmrText.module.css";
+import styles from "./styles/BmrText.module.css";
 
 export default function BmrText() {
   const { bmrState } = useContext(ValuesContext);
-
-  //quarter pounder = 420
-  //ichiran plain, crunchwrap chicken = 600
-  //costco salad = 700
-  //cooked chicken breast = 300
 
   const foodComparisonPercent = (food) => {
     return Math.round((Math.round((bmrState / food) * 100) / 100) * 100);
@@ -42,6 +38,7 @@ export default function BmrText() {
           for existing! Pretty sweet, huh?
         </p>
       </p>
+      <ImagesRep />
     </div>
   );
 }

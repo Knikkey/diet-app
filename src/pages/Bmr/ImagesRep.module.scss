@@ -1,0 +1,35 @@
+@import "../../vars";
+
+.imagesRep-container {
+  h1 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  .img {
+    height: 8rem;
+  }
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+
+  button {
+    background-color: var(--transparent);
+    border: 1px solid #333;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    transition: 0.3s all;
+  }
+
+  button:hover {
+    background-color: #eee;
+  }
+}
