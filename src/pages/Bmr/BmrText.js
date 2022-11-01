@@ -23,20 +23,20 @@ export default function BmrText() {
         ate and represents an estimate on how much energy your body uses just to
         exist. According to our calculations, just by not being dead, your body
         requires about <span>{bmrState}</span> calories per day.
-        <p>
-          That's like
-          <span className={styles["food-comparison"]}>
-            {" "}
-            {foodComparisonPercent(2080)}%{" "}
-          </span>
-          of a whole medium sized Buffalo Chicken pizza from Domino's or{" "}
-          <span className={styles["food-comparison"]}>
-            {" "}
-            {foodComparison(270)}{" "}
-          </span>{" "}
-          large scoops of Pralines & Cream ice cream from Baskin-Robbins just
-          for existing! Pretty sweet, huh?
-        </p>
+      </p>
+      <p>
+        That's like
+        <span className={styles["food-comparison"]}>
+          {" "}
+          {foodComparisonPercent(2080)}%{" "}
+        </span>
+        of a whole medium sized Buffalo Chicken pizza from Domino's or{" "}
+        <span className={styles["food-comparison"]}>
+          {" "}
+          {foodComparison(270)}{" "}
+        </span>{" "}
+        large scoops of Pralines & Cream ice cream from Baskin-Robbins just for
+        existing! Pretty sweet, huh?
       </p>
       <ImagesRep />
     </div>

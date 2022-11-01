@@ -23,7 +23,6 @@ export default function Calculator() {
 
   const formHandler = (e) => {
     e.preventDefault();
-    console.log(heightInches, typeof heightInches);
     let BMR;
 
     if (units === "metric") {

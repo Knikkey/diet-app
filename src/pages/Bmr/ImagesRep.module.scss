@@ -1,5 +1,23 @@
 @import "../../vars";
 
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@property --fraction {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+
+@keyframes clock-wipe {
+  to {
+    --angle: 360deg;
+  }
+}
+
 .imagesRep-container {
   h1 {
     font-size: 2.4rem;
@@ -12,6 +30,14 @@
 
   .img {
     height: 8rem;
+    margin-right: 1rem;
+
+    animation: clock-wipe 1s linear reverse;
+    mask-image: conic-gradient(transparent (var(--angle)), #fff (var(--angle)));
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 

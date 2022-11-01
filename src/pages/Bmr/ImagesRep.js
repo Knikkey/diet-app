@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ValuesContext } from "../../context/ValuesContext";
 
 import pizza from "./images/pizza.webp";
@@ -58,24 +58,52 @@ const images = [
 
 export default function ImagesRep() {
   const [food, setFood] = useState("");
+  const [array, setArray] = useState(null);
 
   const { bmrState } = useContext(ValuesContext);
 
   const calorieRatio = Math.round((bmrState / food.calories) * 100) / 100;
+  const wholeNumber = Math.floor(calorieRatio);
+  const fraction = Math.round((calorieRatio - wholeNumber) * 100) / 100;
+
+  useEffect(() => {
+    let arr = [];
+    for (let i = 1; i <= calorieRatio; i++) {
+      arr.push(food);
+    }
+    setArray(arr);
+  }, [food, calorieRatio]);
+
+  console.log(array);
 
   return (
     <div className={styles["imagesRep-container"]}>
       <h1>Select a food to see a visual representation of your BMR</h1>
       <div className={styles["btn-container"]}>
         {images.map((image) => (
-          <button onClick={() => setFood(image)}>{image.label}</button>
+          <button key={image.label} onClick={() => setFood(image)}>
+            {image.label}
+          </button>
         ))}
       </div>
-      {food && <p>{food.description}</p>}
       {food && (
-        <img src={food.img} alt={food.description} className={styles.img} />
+        <>
+          <p>{food.description}</p>
+          {array &&
+            array.map((food, i) => (
+              <img
+                key={Math.random()}
+                src={food.img}
+                alt={food.description}
+                className={styles.img}
+              />
+            ))}
+
+          <p>
+            {calorieRatio}, {wholeNumber}, {fraction}
+          </p>
+        </>
       )}
-      {food && <p>{calorieRatio}</p>}
     </div>
   );
 }
