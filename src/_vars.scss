@@ -3,6 +3,8 @@
   --box-shadow: 1px 2px 8px #999;
   --box-shadow--light: 1px 2px 8px #bbb;
   --transparent: rgba(0, 0, 0, 0);
+
+  --fraction: 0deg;
 }
 
 //mixins
@@ -16,4 +18,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+//keyframes
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

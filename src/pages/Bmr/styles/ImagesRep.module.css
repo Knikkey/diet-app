@@ -2,14 +2,18 @@
   --box-shadow: 1px 2px 8px #999;
   --box-shadow--light: 1px 2px 8px #bbb;
   --transparent: rgba(0, 0, 0, 0);
+  --fraction: 0deg;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0deg;
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-@property --fraction {
+@property --angle {
   syntax: "<angle>";
   inherits: true;
   initial-value: 0deg;
@@ -34,6 +38,11 @@
 }
 .imagesRep-container .img:last-child {
   margin-right: 0;
+}
+.imagesRep-container .img--fraction {
+  height: 8rem;
+  margin-left: 1rem;
+  mask-image: conic-gradient(transparent var(--fraction), #fff var(--fraction));
 }
 
 .btn-container {

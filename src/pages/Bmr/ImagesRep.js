@@ -74,7 +74,13 @@ export default function ImagesRep() {
     setArray(arr);
   }, [food, calorieRatio]);
 
-  console.log(array);
+  useEffect(() => {
+    if (typeof food === "object")
+      document.documentElement.style.setProperty(
+        "--fraction",
+        360 - fraction * 360 + "deg"
+      );
+  });
 
   return (
     <div className={styles["imagesRep-container"]}>
@@ -98,7 +104,14 @@ export default function ImagesRep() {
                 className={styles.img}
               />
             ))}
-
+          {fraction > 0 && (
+            <img
+              key={Math.random()}
+              src={food.img}
+              alt={food.description}
+              className={styles["img--fraction"]}
+            />
+          )}
           <p>
             {calorieRatio}, {wholeNumber}, {fraction}
           </p>

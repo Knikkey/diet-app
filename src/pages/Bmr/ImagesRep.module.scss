@@ -6,12 +6,6 @@
   initial-value: 0deg;
 }
 
-@property --fraction {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0deg;
-}
-
 @keyframes clock-wipe {
   to {
     --angle: 360deg;
@@ -37,6 +31,16 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &--fraction {
+      height: 8rem;
+      margin-left: 1rem;
+
+      mask-image: conic-gradient(
+        transparent (var(--fraction)),
+        #fff (var(--fraction))
+      );
     }
   }
 }
