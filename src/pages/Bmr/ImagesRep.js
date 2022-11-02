@@ -25,9 +25,9 @@ const images = [
     calories: 270,
   },
   {
-    label: "Ceasar salad",
+    label: "Caesar salad",
     img: costcoSalad,
-    description: "a ceasar salad from Costco (with dressing)",
+    description: "a caesar salad from Costco (with dressing)",
     calories: 700,
   },
   {
