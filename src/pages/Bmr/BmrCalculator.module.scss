@@ -9,7 +9,7 @@
 
   h1 {
     text-align: center;
-    font-size: 4.8rem;
+    font-size: var(--title-font-size);
   }
 }
 
@@ -18,7 +18,7 @@
   grid-template-columns: 1fr 1.5fr 1.5fr;
   align-items: center;
   gap: 1rem;
-  font-size: 1.8rem;
+  font-size: var(--mid-font-size);
 
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
@@ -88,11 +88,11 @@
 }
 
 .result-message {
-  font-size: 2.4rem;
+  font-size: var(--large-font-size);
 
   span {
     color: blue;
-    font-size: 2.8rem;
+    font-size: var(--xl-font-size);
     font-weight: bold;
   }
 }

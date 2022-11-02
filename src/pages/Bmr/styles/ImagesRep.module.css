@@ -2,7 +2,14 @@
   --box-shadow: 1px 2px 8px #999;
   --box-shadow--light: 1px 2px 8px #bbb;
   --transparent: rgba(0, 0, 0, 0);
-  --fraction: 0deg;
+  --small-font-size: 1.2rem;
+  --low-mid-font-size: 1.6rem;
+  --mid-font-size: 1.8rem;
+  --high-mid-font-size: 2rem;
+  --large-font-size: 2.4rem;
+  --xl-font-size: 2.8rem;
+  --subtitle-font-size: 3.2rem;
+  --title-font-size: 4.8rem;
 }
 
 @keyframes fade {
@@ -13,16 +20,6 @@
     opacity: 1;
   }
 }
-@property --angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 0deg;
-}
-@keyframes clock-wipe {
-  to {
-    --angle: 360deg;
-  }
-}
 @keyframes grow {
   from {
     transform: scale(0, 0);
@@ -31,6 +28,20 @@
   to {
     transform: scale(1, 1);
     opacity: 1;
+  }
+}
+:root {
+  --fraction: 0deg;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0deg;
+}
+@keyframes clock-wipe {
+  to {
+    --angle: 360deg;
   }
 }
 @keyframes cutoff {
@@ -51,52 +62,47 @@
   animation: fade 1s;
 }
 .imagesRep-container h1 {
-  font-size: 2.4rem;
+  font-size: var(--subtitle-font-size);
   text-align: center;
 }
 .imagesRep-container p {
-  font-size: 1.8rem;
+  font-size: var(--mid-font-size);
 }
-.imagesRep-container .img {
-  height: 8rem;
-  margin-right: 1rem;
-  mask-image: conic-gradient(transparent var(--angle), #fff var(--angle));
-  animation: clock-wipe 1s linear reverse;
+.imagesRep-container img {
+  height: 7rem;
 }
-.imagesRep-container .img:last-child {
-  margin-right: 0;
-}
-
-.btn-container {
+.imagesRep-container .btn-container {
   display: flex;
   gap: 1rem;
 }
-.btn-container button {
+.imagesRep-container .btn-container button {
   background-color: var(--transparent);
   border: 1px solid #333;
   padding: 1rem 2rem;
-  font-size: 1.6rem;
+  font-size: var(--low-mid-font-size);
   cursor: pointer;
   transition: 0.3s all;
 }
-.btn-container button:hover {
+.imagesRep-container .btn-container button:hover {
   background-color: #eee;
 }
-
-.fraction-container {
+.imagesRep-container .img {
+  margin-right: 1rem;
+  mask-image: conic-gradient(transparent var(--angle), #fff var(--angle));
+  animation: clock-wipe 1s reverse;
+}
+.imagesRep-container .fraction-container {
   display: inline-block;
   position: relative;
-  animation: grow 1s linear forwards;
+  animation: grow 1s forwards;
 }
-.fraction-container .img--fraction {
-  height: 8rem;
+.imagesRep-container .fraction-container .img--fraction {
   mask-image: conic-gradient(transparent var(--fraction), #fff var(--fraction));
 }
-.fraction-container .img--fraction--fall-off {
+.imagesRep-container .fraction-container .img--fraction--fall-off {
   position: absolute;
   top: 0;
   left: 0;
-  height: 8rem;
   animation: cutoff 1.5s linear forwards 1s;
   mask-image: conic-gradient(#fff var(--fraction), transparent var(--fraction));
 }/*# sourceMappingURL=ImagesRep.module.css.map */

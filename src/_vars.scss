@@ -1,10 +1,20 @@
-//shadows
 :root {
+  //shadows
   --box-shadow: 1px 2px 8px #999;
   --box-shadow--light: 1px 2px 8px #bbb;
   --transparent: rgba(0, 0, 0, 0);
 
-  --fraction: 0deg;
+  //text
+  --small-font-size: 1.2rem;
+  --low-mid-font-size: 1.6rem;
+  --mid-font-size: 1.8rem;
+  --high-mid-font-size: 2rem;
+  --large-font-size: 2.4rem;
+  --xl-font-size: 2.8rem;
+
+  //titles
+  --subtitle-font-size: 3.2rem;
+  --title-font-size: 4.8rem;
 }
 
 //mixins
@@ -32,6 +42,17 @@
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
     opacity: 1;
   }
 }

@@ -1,7 +1,7 @@
 @import "../../vars";
 
 .bmrText-container {
-  font-size: 2.8rem;
+  font-size: var(--xl-font-size);
 
   span {
     font-weight: bold;

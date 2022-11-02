@@ -1,5 +1,9 @@
 @import "../../vars";
 
+:root {
+  --fraction: 0deg;
+}
+
 @property --angle {
   syntax: "<angle>";
   inherits: true;
@@ -9,17 +13,6 @@
 @keyframes clock-wipe {
   to {
     --angle: 360deg;
-  }
-}
-
-@keyframes grow {
-  from {
-    transform: scale(0, 0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1, 1);
-    opacity: 1;
   }
 }
 
@@ -44,69 +37,64 @@
   animation: fade 1s;
 
   h1 {
-    font-size: 2.4rem;
+    font-size: var(--subtitle-font-size);
     text-align: center;
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: var(--mid-font-size);
+  }
+
+  img {
+    height: 7rem;
+  }
+
+  .btn-container {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      background-color: var(--transparent);
+      border: 1px solid #333;
+      padding: 1rem 2rem;
+      font-size: var(--low-mid-font-size);
+      cursor: pointer;
+
+      transition: 0.3s all;
+    }
+
+    button:hover {
+      background-color: #eee;
+    }
   }
 
   .img {
-    height: 8rem;
     margin-right: 1rem;
 
     mask-image: conic-gradient(transparent (var(--angle)), #fff (var(--angle)));
-    animation: clock-wipe 1s linear reverse;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.btn-container {
-  display: flex;
-  gap: 1rem;
-
-  button {
-    background-color: var(--transparent);
-    border: 1px solid #333;
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
-    cursor: pointer;
-
-    transition: 0.3s all;
+    animation: clock-wipe 1s reverse;
   }
 
-  button:hover {
-    background-color: #eee;
-  }
-}
+  .fraction-container {
+    display: inline-block;
+    position: relative;
+    animation: grow 1s forwards;
 
-.fraction-container {
-  display: inline-block;
-  position: relative;
-  animation: grow 1s linear forwards;
-
-  .img--fraction {
-    height: 8rem;
-
-    mask-image: conic-gradient(
-      transparent (var(--fraction)),
-      #fff (var(--fraction))
-    );
-
-    &--fall-off {
-      @include absolute;
-
-      height: 8rem;
-
-      animation: cutoff 1.5s linear forwards 1s;
+    .img--fraction {
       mask-image: conic-gradient(
-        #fff (var(--fraction)),
-        transparent (var(--fraction))
+        transparent (var(--fraction)),
+        #fff (var(--fraction))
       );
+
+      &--fall-off {
+        @include absolute;
+
+        animation: cutoff 1.5s linear forwards 1s;
+        mask-image: conic-gradient(
+          #fff (var(--fraction)),
+          transparent (var(--fraction))
+        );
+      }
     }
   }
 }
