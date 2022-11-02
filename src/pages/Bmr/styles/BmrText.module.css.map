@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../BmrText.module.scss"],"names":[],"mappings":"AAAA;EACE;;AAEA;EACE;EACA;;AAGF;EACE;;AAEA;EACE;;AAGF;EACE","file":"BmrText.module.css"}
+{"version":3,"sourceRoot":"","sources":["../../../_vars.scss","../BmrText.module.scss"],"names":[],"mappings":"AACA;EACE;EACA;EACA;EAEA;;;AAuBF;EACE;IACE;;EAEF;IACE;;;AChCJ;EACE;;AAEA;EACE;EACA;;AAGF;EACE;;AAEA;EACE;;AAGF;EACE;;AAIJ;EACE","file":"BmrText.module.css"}

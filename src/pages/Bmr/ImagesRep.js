@@ -15,43 +15,43 @@ const images = [
   {
     label: "Pizza",
     img: pizza,
-    description: "A medium buffalo chicken pizza from Domino's",
+    description: "a medium buffalo chicken pizza from Domino's",
     calories: 2080,
   },
   {
     label: "Ice cream",
     img: icecream,
-    description: "A scoop of pralines & cream ice cream from Baskin-Robbins",
+    description: "a scoop of pralines & cream ice cream from Baskin-Robbins",
     calories: 270,
   },
   {
     label: "Ceasar salad",
     img: costcoSalad,
-    description: "A ceasar salad from Costco (with dressing)",
+    description: "a ceasar salad from Costco (with dressing)",
     calories: 700,
   },
   {
     label: "Crunchwrap",
     img: crunchwrap,
-    description: "A chicken crunchwrap supreme from Taco Bell",
+    description: "a chicken crunchwrap supreme from Taco Bell",
     calories: 600,
   },
   {
     label: "Chicken breast",
     img: chickenBreast,
-    description: "A cooked chicken breast",
+    description: "a cooked chicken breast",
     calories: 270,
   },
   {
     label: "Quarter Pounder",
     img: quarterPounder,
-    description: "A quarter pounder from McDonald's",
+    description: "a quarter pounder from McDonald's",
     calories: 420,
   },
   {
     label: "Ramen",
     img: ramen,
-    description: "A bowl of Ichiran ramen without toppings",
+    description: "a bowl of Ichiran ramen without toppings",
     calories: 550,
   },
 ];
@@ -94,7 +94,9 @@ export default function ImagesRep() {
       </div>
       {food && (
         <>
-          <p>{food.description}</p>
+          <p>
+            Your BMR compared to: <span>{food.description}</span>
+          </p>
           {array &&
             array.map((food, i) => (
               <img
@@ -105,16 +107,21 @@ export default function ImagesRep() {
               />
             ))}
           {fraction > 0 && (
-            <img
-              key={Math.random()}
-              src={food.img}
-              alt={food.description}
-              className={styles["img--fraction"]}
-            />
+            <div key={Math.random()} className={styles["fraction-container"]}>
+              <img
+                key={Math.random()}
+                src={food.img}
+                alt={food.description}
+                className={styles["img--fraction"]}
+              />
+              <img
+                key={Math.random()}
+                src={food.img}
+                alt={food.description}
+                className={styles["img--fraction--fall-off"]}
+              />
+            </div>
           )}
-          <p>
-            {calorieRatio}, {wholeNumber}, {fraction}
-          </p>
         </>
       )}
     </div>

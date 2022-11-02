@@ -1,3 +1,18 @@
+:root {
+  --box-shadow: 1px 2px 8px #999;
+  --box-shadow--light: 1px 2px 8px #bbb;
+  --transparent: rgba(0, 0, 0, 0);
+  --fraction: 0deg;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .bmrText-container {
   font-size: 2.8rem;
 }
@@ -8,9 +23,12 @@
 .bmrText-container .food-comparison {
   text-decoration: none;
 }
-.bmrText-container .food-comparison:nth-child(1) {
+.bmrText-container .food-comparison:nth-child(2) {
   color: red;
 }
-.bmrText-container .food-comparison:nth-child(2) {
+.bmrText-container .food-comparison:nth-child(3) {
   color: blue;
+}
+.bmrText-container .text {
+  animation: fade 1s;
 }/*# sourceMappingURL=BmrText.module.css.map */

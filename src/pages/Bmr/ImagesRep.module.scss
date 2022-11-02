@@ -12,7 +12,37 @@
   }
 }
 
+@keyframes grow {
+  from {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes cutoff {
+  0% {
+    top: 0;
+  }
+
+  25% {
+    transform: rotate(75deg);
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
+    display: none;
+  }
+}
+
 .imagesRep-container {
+  overflow: hidden;
+  animation: fade 1s;
+
   h1 {
     font-size: 2.4rem;
     text-align: center;
@@ -26,21 +56,11 @@
     height: 8rem;
     margin-right: 1rem;
 
-    animation: clock-wipe 1s linear reverse;
     mask-image: conic-gradient(transparent (var(--angle)), #fff (var(--angle)));
+    animation: clock-wipe 1s linear reverse;
 
     &:last-child {
       margin-right: 0;
-    }
-
-    &--fraction {
-      height: 8rem;
-      margin-left: 1rem;
-
-      mask-image: conic-gradient(
-        transparent (var(--fraction)),
-        #fff (var(--fraction))
-      );
     }
   }
 }
@@ -53,7 +73,7 @@
     background-color: var(--transparent);
     border: 1px solid #333;
     padding: 1rem 2rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     cursor: pointer;
 
     transition: 0.3s all;
@@ -61,5 +81,32 @@
 
   button:hover {
     background-color: #eee;
+  }
+}
+
+.fraction-container {
+  display: inline-block;
+  position: relative;
+  animation: grow 1s linear forwards;
+
+  .img--fraction {
+    height: 8rem;
+
+    mask-image: conic-gradient(
+      transparent (var(--fraction)),
+      #fff (var(--fraction))
+    );
+
+    &--fall-off {
+      @include absolute;
+
+      height: 8rem;
+
+      animation: cutoff 1.5s linear forwards 1s;
+      mask-image: conic-gradient(
+        #fff (var(--fraction)),
+        transparent (var(--fraction))
+      );
+    }
   }
 }

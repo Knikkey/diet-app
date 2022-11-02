@@ -32,8 +32,8 @@ export default function Calculator() {
             6.25 * height -
             5 * age +
             (sex === "male" ? 5 : -161)) /
-            100
-        ) * 100;
+            10
+        ) * 10;
     }
     if (units !== "metric") {
       BMR =
@@ -42,8 +42,8 @@ export default function Calculator() {
             6.25 * ((height * 12 + Number(heightInches)) * 2.54) -
             5 * age +
             (sex === "male" ? 5 : -161)) /
-            100
-        ) * 100;
+            10
+        ) * 10;
     }
 
     setBmrState(BMR);
