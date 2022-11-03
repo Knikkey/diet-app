@@ -2,12 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { ValuesContext } from "../../context/ValuesContext";
 
 import pizza from "./images/pizza.webp";
-import icecream from "./images/icecream.jpg";
+import icecream from "./images/icecream.webp";
 import costcoSalad from "./images/costco-salad.webp";
 import crunchwrap from "./images/crunchwrap.jpg";
-import chickenBreast from "./images/chicken-breast.png";
-import quarterPounder from "./images/quarter-pounder.jpg";
-import ramen from "./images/ramen.jpg";
+import chickenBreast from "./images/chicken-breast.webp";
+import quarterPounder from "./images/quarter-pounder.webp";
+import ramen from "./images/ramen.webp";
 
 import styles from "./styles/ImagesRep.module.css";
 
