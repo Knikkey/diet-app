@@ -11,12 +11,12 @@
   --subtitle-font-size: 3.2rem;
   --title-font-size: 4.8rem;
   --mint: #50e3c2;
-  --rose: #ff5733;
-  --blue: #89cff0;
-  --beige: #f5f5dc;
-  --pink: #faafba;
-  --lavendar: #e6e6fa;
-  --orange: #fac898;
+  --pink: #e26575;
+  --pastel-green: #cce4d4;
+  --emerald: #6ae2c3;
+  --deep-green: #9fd3cb;
+  --yellow: #e4f7d0;
+  --green: #91e2cd;
 }
 
 @keyframes fade {
@@ -54,9 +54,8 @@
 .bmr {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  justify-items: center;
-  padding: 2rem;
+  padding: 6rem 3rem;
   height: 100vh;
   position: relative;
-  background-color: var(--blue);
+  background-color: var(--emerald);
 }/*# sourceMappingURL=Bmr.module.css.map */

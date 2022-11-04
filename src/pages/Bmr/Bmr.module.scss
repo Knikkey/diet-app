@@ -3,10 +3,7 @@
 .bmr {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  justify-items: center;
-
-  padding: 2rem;
 
   @include section;
-  background-color: var(--blue);
+  background-color: var(--emerald);
 }

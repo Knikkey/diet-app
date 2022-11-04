@@ -9,7 +9,7 @@ export default function Bmr({ id }) {
     <section id={id} className={styles.bmr}>
       <BmrCalculator />
       <BmrText />
-      <Divider color="beige" />
+      <Divider color="yellow" />
     </section>
   );
 }

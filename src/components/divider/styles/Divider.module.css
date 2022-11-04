@@ -13,21 +13,21 @@
   width: calc(100% + 1.3px);
   height: 65px;
 }
-.divider .shape-fill--rose {
-  fill: var(--rose);
-}
-.divider .shape-fill--blue {
-  fill: var(--blue);
-}
-.divider .shape-fill--beige {
-  fill: var(--beige);
-}
 .divider .shape-fill--pink {
   fill: var(--pink);
 }
-.divider .shape-fill--lavendar {
-  fill: var(--lavendar);
+.divider .shape-fill--pastel-green {
+  fill: var(--pastel-green);
 }
-.divider .shape-fill--orange {
-  fill: var(--orange);
+.divider .shape-fill--emerald {
+  fill: var(--emerald);
+}
+.divider .shape-fill--deep-green {
+  fill: var(--deep-green);
+}
+.divider .shape-fill--yellow {
+  fill: var(--yellow);
+}
+.divider .shape-fill--green {
+  fill: var(--green);
 }/*# sourceMappingURL=Divider.module.css.map */

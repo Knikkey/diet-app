@@ -18,12 +18,12 @@
 
   //colors
   --mint: #50e3c2;
-  --rose: #ff5733;
-  --blue: #89cff0;
-  --beige: #f5f5dc;
-  --pink: #faafba;
-  --lavendar: #e6e6fa;
-  --orange: #fac898;
+  --pink: #e26575;
+  --pastel-green: #cce4d4;
+  --emerald: #6ae2c3;
+  --deep-green: #9fd3cb;
+  --yellow: #e4f7d0;
+  --green: #91e2cd;
 }
 
 //mixins
@@ -46,6 +46,7 @@
 }
 
 @mixin section {
+  padding: 6rem 3rem;
   height: 100vh;
   position: relative;
 }

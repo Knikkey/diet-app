@@ -6,7 +6,7 @@ export default function Faqs({ id }) {
   return (
     <div id={id} className={styles.faqs}>
       Faqs
-      <Divider color="orange" />
+      <Divider color="pink" />
     </div>
   );
 }

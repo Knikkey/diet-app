@@ -15,23 +15,23 @@
   }
 
   .shape-fill {
-    &--rose {
-      fill: var(--rose);
-    }
-    &--blue {
-      fill: var(--blue);
-    }
-    &--beige {
-      fill: var(--beige);
-    }
     &--pink {
       fill: var(--pink);
     }
-    &--lavendar {
-      fill: var(--lavendar);
+    &--pastel-green {
+      fill: var(--pastel-green); //bmr
     }
-    &--orange {
-      fill: var(--orange);
+    &--emerald {
+      fill: var(--emerald); //basic
+    }
+    &--deep-green {
+      fill: var(--deep-green); //faq
+    }
+    &--yellow {
+      fill: var(--yellow); //tdee
+    }
+    &--green {
+      fill: var(--green); //home
     }
   }
 }

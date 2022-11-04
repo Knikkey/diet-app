@@ -17,6 +17,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1 {
   margin-top: 0;
 }

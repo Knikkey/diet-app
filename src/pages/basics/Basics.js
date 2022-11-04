@@ -6,7 +6,7 @@ export default function Basics({ id }) {
   return (
     <div id={id} className={styles.basics}>
       Basics
-      <Divider color="blue" />
+      <Divider color="emerald" />
     </div>
   );
 }
