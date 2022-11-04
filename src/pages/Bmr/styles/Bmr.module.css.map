@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../Bmr.module.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EAEA","file":"Bmr.module.css"}
+{"version":3,"sourceRoot":"","sources":["../../../_vars.scss","../Bmr.module.scss"],"names":[],"mappings":"AAAA;EAEE;EACA;EACA;EAGA;EACA;EACA;EACA;EACA;EACA;EAGA;EACA;;;AA2BF;EACE;IACE;;EAEF;IACE;;;AAIJ;EACE;IACE;IACA;;EAEF;IACE;IACA;;;AAIJ;EACE;IACE;;EAEF;IACE;;EAEF;IACE;;EAEF;IACE;;;ACxEJ;EACE;EACA;EACA;EAEA;EDgCA","file":"Bmr.module.css"}

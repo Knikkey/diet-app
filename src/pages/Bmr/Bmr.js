@@ -1,13 +1,15 @@
 import BmrCalculator from "./BmrCalculator";
 import BmrText from "./BmrText";
+import Divider from "../../components/divider/Divider";
 
 import styles from "./styles/Bmr.module.css";
 
 export default function Bmr() {
   return (
-    <div className={styles.bmr}>
+    <section className={styles.bmr}>
       <BmrCalculator />
       <BmrText />
-    </div>
+      <Divider />
+    </section>
   );
 }

@@ -36,6 +36,10 @@
   left: 0;
 }
 
+@mixin section {
+  padding-top: 3rem;
+}
+
 //keyframes
 @keyframes fade {
   from {
