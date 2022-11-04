@@ -1,11 +1,14 @@
+import Divider from "../../components/divider/Divider";
+
 import styles from "./styles/Hero.module.css";
 
-export default function Hero() {
+export default function Hero({ id }) {
   return (
-    <div className={styles.hero}>
+    <div id={id} className={styles.hero}>
       <h1>Fit with Nick</h1>
       <h2>A beginner's guide to weight loss</h2>
       <p>Just enough info to help you get started without overloading you.</p>
+      <Divider style={styles["shape-fill"]} />
     </div>
   );
 }

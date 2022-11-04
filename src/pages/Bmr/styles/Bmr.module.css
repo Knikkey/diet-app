@@ -11,6 +11,12 @@
   --subtitle-font-size: 3.2rem;
   --title-font-size: 4.8rem;
   --mint: #50e3c2;
+  --rose: #ff5733;
+  --blue: #89cff0;
+  --beige: #f5f5dc;
+  --pink: #faafba;
+  --lavendar: #e6e6fa;
+  --orange: #fac898;
 }
 
 @keyframes fade {
@@ -50,6 +56,11 @@
   grid-template-columns: 1fr 2fr;
   justify-items: center;
   padding: 2rem;
-  padding: 3rem 0;
   height: 100vh;
+  position: relative;
+  background-color: var(--blue);
+}
+
+.shape-fill {
+  fill: var(--beige);
 }/*# sourceMappingURL=Bmr.module.css.map */

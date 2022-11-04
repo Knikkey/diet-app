@@ -11,6 +11,12 @@
   --subtitle-font-size: 3.2rem;
   --title-font-size: 4.8rem;
   --mint: #50e3c2;
+  --rose: #ff5733;
+  --blue: #89cff0;
+  --beige: #f5f5dc;
+  --pink: #faafba;
+  --lavendar: #e6e6fa;
+  --orange: #fac898;
 }
 
 @keyframes fade {
@@ -46,6 +52,11 @@
   }
 }
 .hero {
-  padding: 3rem 0;
   height: 100vh;
+  position: relative;
+  background-color: var(--orange);
+}
+
+.shape-fill {
+  fill: var(--rose);
 }/*# sourceMappingURL=Hero.module.css.map */

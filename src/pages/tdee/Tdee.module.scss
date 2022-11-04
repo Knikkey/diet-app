@@ -1,0 +1,11 @@
+@import "../../vars";
+
+.tdee {
+  @include section;
+
+  background-color: var(--beige);
+}
+
+.shape-fill {
+  fill: var(--pink);
+}

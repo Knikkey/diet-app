@@ -1,0 +1,10 @@
+@import "../../vars";
+
+.faqs {
+  @include section;
+  background-color: var(--pink);
+}
+
+.shape-fill {
+  fill: var(--lavendar);
+}

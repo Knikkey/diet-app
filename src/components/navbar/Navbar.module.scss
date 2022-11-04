@@ -7,6 +7,11 @@
   transition: all 0.7s;
 
   overflow: hidden;
+  z-index: 2;
+  max-height: 0rem;
+  &:hover {
+    max-height: 10rem;
+  }
 
   &--collapsed {
     max-height: 0rem;
