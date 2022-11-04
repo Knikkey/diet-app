@@ -6,7 +6,7 @@ export default function Tdee({ id }) {
   return (
     <div id={id} className={styles.tdee}>
       Tdee
-      <Divider style={styles["shape-fill"]} />
+      <Divider color="pink" />
     </div>
   );
 }

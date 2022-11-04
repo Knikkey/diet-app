@@ -8,7 +8,7 @@ export default function Hero({ id }) {
       <h1>Fit with Nick</h1>
       <h2>A beginner's guide to weight loss</h2>
       <p>Just enough info to help you get started without overloading you.</p>
-      <Divider style={styles["shape-fill"]} />
+      <Divider color="rose" />
     </div>
   );
 }

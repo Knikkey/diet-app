@@ -12,4 +12,22 @@
   display: block;
   width: calc(100% + 1.3px);
   height: 65px;
+}
+.divider .shape-fill--rose {
+  fill: var(--rose);
+}
+.divider .shape-fill--blue {
+  fill: var(--blue);
+}
+.divider .shape-fill--beige {
+  fill: var(--beige);
+}
+.divider .shape-fill--pink {
+  fill: var(--pink);
+}
+.divider .shape-fill--lavendar {
+  fill: var(--lavendar);
+}
+.divider .shape-fill--orange {
+  fill: var(--orange);
 }/*# sourceMappingURL=Divider.module.css.map */

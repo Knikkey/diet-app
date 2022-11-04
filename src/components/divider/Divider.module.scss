@@ -13,4 +13,25 @@
     width: calc(100% + 1.3px);
     height: 65px;
   }
+
+  .shape-fill {
+    &--rose {
+      fill: var(--rose);
+    }
+    &--blue {
+      fill: var(--blue);
+    }
+    &--beige {
+      fill: var(--beige);
+    }
+    &--pink {
+      fill: var(--pink);
+    }
+    &--lavendar {
+      fill: var(--lavendar);
+    }
+    &--orange {
+      fill: var(--orange);
+    }
+  }
 }
