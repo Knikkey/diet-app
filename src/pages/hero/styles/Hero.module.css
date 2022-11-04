@@ -45,22 +45,7 @@
     transform: rotate(0deg);
   }
 }
-.bmrText-container {
-  font-size: var(--high-mid-font-size);
-}
-.bmrText-container span {
-  font-weight: bold;
-  text-decoration: underline;
-}
-.bmrText-container .food-comparison {
-  text-decoration: none;
-}
-.bmrText-container .food-comparison:nth-child(2) {
-  color: red;
-}
-.bmrText-container .food-comparison:nth-child(3) {
-  color: blue;
-}
-.bmrText-container .text {
-  animation: fade 1s;
-}/*# sourceMappingURL=BmrText.module.css.map */
+.hero {
+  padding: 3rem 0;
+  height: 100vh;
+}/*# sourceMappingURL=Hero.module.css.map */

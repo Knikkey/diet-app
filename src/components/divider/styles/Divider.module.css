@@ -1,3 +1,7 @@
+:root {
+  --fill-color: red;
+}
+
 .divider {
   position: absolute;
   bottom: 0;
@@ -14,5 +18,5 @@
   height: 65px;
 }
 .divider .shape-fill {
-  fill: #50e3c2;
+  fill: var(--fill-color);
 }/*# sourceMappingURL=Divider.module.css.map */

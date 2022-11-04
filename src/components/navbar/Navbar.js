@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom";
-
 import styles from "./styles/Navbar.module.css";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/basics", label: "Weight Loss 101" },
-  { to: "/bmr", label: "BMR Calculator" },
-  { to: "/tdee", label: "TDEE Calculator" },
-  { to: "/faqs", label: "FAQs" },
+  { href: "home", label: "Home" },
+  { href: "basics", label: "Weight Loss 101" },
+  { href: "bmr", label: "BMR Calculator" },
+  { href: "tdee", label: "TDEE Calculator" },
+  { href: "faqs", label: "FAQs" },
 ];
 
 export default function Navbar() {
@@ -29,9 +27,9 @@ export default function Navbar() {
       <ul>
         {links.map((link, i) => (
           <li key={i}>
-            <Link to={link.to} className={styles.link}>
+            <a href={`#${link.href}`} className={styles.link}>
               {link.label}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

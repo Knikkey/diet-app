@@ -15,6 +15,9 @@
   //titles
   --subtitle-font-size: 3.2rem;
   --title-font-size: 4.8rem;
+
+  //colors
+  --mint: #50e3c2;
 }
 
 //mixins
@@ -37,7 +40,8 @@
 }
 
 @mixin section {
-  padding-top: 3rem;
+  padding: 3rem 0;
+  height: 100vh;
 }
 
 //keyframes

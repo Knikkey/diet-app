@@ -1,6 +1,10 @@
 import styles from "./styles/Divider.module.css";
 
-export default function Divider() {
+export default function Divider({ color }) {
+  (() => {
+    document.documentElement.style.setProperty("--fill-color", color);
+  })();
+
   return (
     <div className={styles.divider}>
       <svg

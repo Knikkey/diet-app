@@ -1,3 +1,7 @@
+:root {
+  --fill-color: red;
+}
+
 .divider {
   position: absolute;
   bottom: 0;
@@ -15,6 +19,6 @@
   }
 
   .shape-fill {
-    fill: #50e3c2;
+    fill: var(--fill-color);
   }
 }
