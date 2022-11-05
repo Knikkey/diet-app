@@ -9,6 +9,7 @@
   overflow: hidden;
   z-index: 2;
   max-height: 0rem;
+
   &:hover {
     max-height: 10rem;
   }
@@ -62,6 +63,6 @@
   }
 
   .shape-fill {
-    fill: var(--mint);
+    fill: var(--pastel-blue);
   }
 }
