@@ -3,4 +3,33 @@
 .hero {
   @include section;
   background-color: var(--grey-green);
+
+  display: flex;
+  align-items: center;
+}
+
+.text-container {
+  margin-left: 10rem;
+  max-width: 40%;
+
+  h1 {
+    font-size: var(--title-font-size);
+    line-height: 0;
+  }
+
+  h2 {
+    font-size: var(--subtitle-font-size);
+  }
+
+  p {
+    font-size: var(--high-mid-font-size);
+  }
+
+  img {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+
+    max-height: 50rem;
+  }
 }

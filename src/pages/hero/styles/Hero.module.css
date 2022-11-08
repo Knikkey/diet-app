@@ -56,4 +56,27 @@
   height: 100vh;
   position: relative;
   background-color: var(--grey-green);
+  display: flex;
+  align-items: center;
+}
+
+.text-container {
+  margin-left: 10rem;
+  max-width: 40%;
+}
+.text-container h1 {
+  font-size: var(--title-font-size);
+  line-height: 0;
+}
+.text-container h2 {
+  font-size: var(--subtitle-font-size);
+}
+.text-container p {
+  font-size: var(--high-mid-font-size);
+}
+.text-container img {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  max-height: 50rem;
 }/*# sourceMappingURL=Hero.module.css.map */

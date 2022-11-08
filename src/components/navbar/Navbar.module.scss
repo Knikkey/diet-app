@@ -8,38 +8,34 @@
 
   overflow: hidden;
   z-index: 2;
-  max-height: 0rem;
+  max-height: 10rem;
 
-  &:hover {
-    max-height: 10rem;
-  }
-
-  &--collapsed {
-    max-height: 0rem;
+  &__hide {
+    max-height: 0;
 
     &:hover {
       max-height: 10rem;
     }
   }
+}
 
-  ul {
-    display: flex;
-    gap: 4rem;
-    justify-content: center;
-    list-style: none;
+ul {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  list-style: none;
 
-    li:hover {
-      animation: shake 0.8s;
-    }
+  li:hover {
+    animation: shake 0.8s;
+  }
 
-    .link {
-      text-decoration: none;
-      font-size: var(--high-mid-font-size);
-      color: #111;
+  .link {
+    text-decoration: none;
+    font-size: var(--high-mid-font-size);
+    color: #111;
 
-      &:hover {
-        color: #555;
-      }
+    &:hover {
+      color: #555;
     }
   }
 }

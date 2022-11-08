@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import styles from "./styles/Navbar.module.css";
 
 const links = [
@@ -9,8 +11,21 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [show, setShow] = useState(true);
+  const controlNavbar = () => {
+    if (window.scrollY > 600) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+  }, []);
+
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${!show && styles["nav__hide"]}`}>
       <div className={styles.bubble}>
         <svg
           data-name="Layer 1"

@@ -58,32 +58,30 @@
   transition: all 0.7s;
   overflow: hidden;
   z-index: 2;
-  max-height: 0rem;
-}
-.nav:hover {
   max-height: 10rem;
 }
-.nav--collapsed {
-  max-height: 0rem;
+.nav__hide {
+  max-height: 0;
 }
-.nav--collapsed:hover {
+.nav__hide:hover {
   max-height: 10rem;
 }
-.nav ul {
+
+ul {
   display: flex;
   gap: 4rem;
   justify-content: center;
   list-style: none;
 }
-.nav ul li:hover {
+ul li:hover {
   animation: shake 0.8s;
 }
-.nav ul .link {
+ul .link {
   text-decoration: none;
   font-size: var(--high-mid-font-size);
   color: #111;
 }
-.nav ul .link:hover {
+ul .link:hover {
   color: #555;
 }
 
