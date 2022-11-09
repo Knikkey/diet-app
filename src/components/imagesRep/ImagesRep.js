@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { ValuesContext } from "../../context/ValuesContext";
-import { calorieData } from "../../components/calculations/FoodCalc";
+import { useEffect, useState } from "react";
+import { calorieData } from "../calculations/FoodCalc";
 
 import pizza from "./images/pizza.webp";
 import icecream from "./images/icecream.webp";
@@ -57,13 +56,11 @@ const images = [
   },
 ];
 
-export default function ImagesRep() {
+export default function ImagesRep({ number, label }) {
   const [food, setFood] = useState("");
   const [array, setArray] = useState(null);
 
-  const { bmrState } = useContext(ValuesContext);
-
-  const { calorieRatio, fraction } = calorieData(bmrState, food.calories);
+  const { calorieRatio, fraction } = calorieData(number, food.calories);
 
   useEffect(() => {
     let arr = [];
@@ -81,25 +78,9 @@ export default function ImagesRep() {
       );
   });
 
-  // useEffect(() => {
-  //   let arr = [];
-  //   for (let i = 1; i <= calorieRatio; i++) {
-  //     arr.push(food);
-  //   }
-  //   setArray(arr);
-  // }, [food, calorieRatio]);
-
-  // useEffect(() => {
-  //   if (typeof food === "object")
-  //     document.documentElement.style.setProperty(
-  //       "--fraction",
-  //       360 - fraction * 360 + "deg"
-  //     );
-  // });
-
   return (
     <div className={styles["imagesRep-container"]}>
-      <h1>Select a food to see a visual representation of your BMR</h1>
+      <h1>Select a food to see a visual representation of your {label}</h1>
       <div className={styles["btn-container"]}>
         {images.map((image) => (
           <button key={image.label} onClick={() => setFood(image)}>
@@ -110,7 +91,7 @@ export default function ImagesRep() {
       {food && (
         <>
           <p>
-            Your BMR compared to: <span>{food.description}</span>
+            Your {label} compared to: <span>{food.description}</span>
           </p>
           {array &&
             array.map((food, i) => (

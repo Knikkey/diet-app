@@ -4,7 +4,7 @@ import {
   foodComparisonPercent,
   foodComparison,
 } from "../../components/calculations/FoodCalc";
-import ImagesRep from "./ImagesRep";
+import ImagesRep from "../../components/imagesRep/ImagesRep";
 
 import styles from "./styles/BmrText.module.css";
 
@@ -36,7 +36,7 @@ export default function BmrText() {
             large scoops of Pralines & Cream ice cream from Baskin-Robbins just
             for existing! Pretty sweet, huh?
           </p>
-          <ImagesRep />
+          <ImagesRep number={bmrState} label={"BMR"} />
         </>
       )}
     </div>
