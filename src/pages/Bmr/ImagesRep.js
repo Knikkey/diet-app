@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ValuesContext } from "../../context/ValuesContext";
+import { calorieData } from "../../components/calculations/FoodCalc";
 
 import pizza from "./images/pizza.webp";
 import icecream from "./images/icecream.webp";
@@ -62,9 +63,7 @@ export default function ImagesRep() {
 
   const { bmrState } = useContext(ValuesContext);
 
-  const calorieRatio = Math.round((bmrState / food.calories) * 100) / 100;
-  const wholeNumber = Math.floor(calorieRatio);
-  const fraction = Math.round((calorieRatio - wholeNumber) * 100) / 100;
+  const { calorieRatio, fraction } = calorieData(bmrState, food.calories);
 
   useEffect(() => {
     let arr = [];
@@ -81,6 +80,22 @@ export default function ImagesRep() {
         360 - fraction * 360 + "deg"
       );
   });
+
+  // useEffect(() => {
+  //   let arr = [];
+  //   for (let i = 1; i <= calorieRatio; i++) {
+  //     arr.push(food);
+  //   }
+  //   setArray(arr);
+  // }, [food, calorieRatio]);
+
+  // useEffect(() => {
+  //   if (typeof food === "object")
+  //     document.documentElement.style.setProperty(
+  //       "--fraction",
+  //       360 - fraction * 360 + "deg"
+  //     );
+  // });
 
   return (
     <div className={styles["imagesRep-container"]}>

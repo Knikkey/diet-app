@@ -1,7 +1,7 @@
 import { useState, useRef, useContext } from "react";
 import { ValuesContext } from "../../context/ValuesContext";
-import FormElements from "../../components/FormElements";
-import Radio from "../../components/Radio";
+import FormElements from "../../components/form/FormElements";
+import Radio from "../../components/form/Radio";
 
 import styles from "./styles/BmrCalculator.module.css";
 

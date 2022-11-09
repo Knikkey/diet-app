@@ -1,19 +1,15 @@
 import { useContext } from "react";
 import { ValuesContext } from "../../context/ValuesContext";
+import {
+  foodComparisonPercent,
+  foodComparison,
+} from "../../components/calculations/FoodCalc";
 import ImagesRep from "./ImagesRep";
 
 import styles from "./styles/BmrText.module.css";
 
 export default function BmrText() {
   const { bmrState } = useContext(ValuesContext);
-
-  const foodComparisonPercent = (food) => {
-    return Math.round((Math.round((bmrState / food) * 100) / 100) * 100);
-  };
-
-  const foodComparison = (food) => {
-    return Math.round((bmrState / food) * 10) / 10;
-  };
 
   return (
     <div className={styles["bmrText-container"]}>
@@ -30,12 +26,12 @@ export default function BmrText() {
             requires about <span>{bmrState}</span> calories per day. That's like
             <span className={styles["food-comparison"]}>
               {" "}
-              {foodComparisonPercent(2080)}%{" "}
+              {foodComparisonPercent(bmrState, 2080)}%{" "}
             </span>
             of a whole medium sized Buffalo Chicken pizza from Domino's or{" "}
             <span className={styles["food-comparison"]}>
               {" "}
-              {foodComparison(270)}{" "}
+              {foodComparison(bmrState, 270)}{" "}
             </span>{" "}
             large scoops of Pralines & Cream ice cream from Baskin-Robbins just
             for existing! Pretty sweet, huh?

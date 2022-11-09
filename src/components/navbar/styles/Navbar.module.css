@@ -58,7 +58,7 @@
   transition: all 0.7s;
   overflow: hidden;
   z-index: 2;
-  max-height: 10rem;
+  max-height: 7rem;
 }
 .nav__hide {
   max-height: 0;
