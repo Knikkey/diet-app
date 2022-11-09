@@ -2,6 +2,7 @@
 
 .tdee {
   @include section;
-
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   background-color: var(--yellow);
 }
