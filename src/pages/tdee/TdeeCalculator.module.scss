@@ -1,0 +1,13 @@
+@import "../../vars";
+
+.calc-container {
+  @include form-container;
+}
+
+.form {
+  @include flex--col;
+
+  .input {
+    margin-top: 1rem;
+  }
+}

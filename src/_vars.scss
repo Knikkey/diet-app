@@ -32,7 +32,7 @@
   flex-direction: column;
 }
 
-@mixin flex--center {
+@mixin flex--col--center {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +49,20 @@
   padding: 6rem 3rem;
   height: 100vh;
   position: relative;
+}
+
+@mixin form-container {
+  padding: 1rem 2rem 2rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  background-color: #fff;
+
+  h1 {
+    text-align: center;
+    font-size: var(--title-font-size);
+  }
 }
 
 //keyframes

@@ -4,9 +4,9 @@ export const ValuesContext = createContext();
 
 export function ValuesProvider({ children }) {
   const [bmrState, setBmrState] = useState(null);
-  const [tdeeState, settdeeState] = useState(null);
+  const [tdeeState, setTdeeState] = useState(null);
 
-  const values = { bmrState, setBmrState, tdeeState, settdeeState };
+  const values = { bmrState, setBmrState, tdeeState, setTdeeState };
 
   return (
     <div>

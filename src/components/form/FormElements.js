@@ -1,3 +1,5 @@
+//label, type, placeholder, value, name, defaultChecked, onChange, className
+
 export default function FormElements(props) {
   return (
     <>
