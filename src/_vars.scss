@@ -63,6 +63,42 @@
     text-align: center;
     font-size: var(--title-font-size);
   }
+
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow--light);
+    padding: 1rem 2rem;
+    font-size: inherit;
+    margin: 1rem auto 0;
+    grid-column: 1/-1;
+    cursor: pointer;
+  }
+}
+
+@mixin result-message {
+  font-size: var(--large-font-size);
+
+  span {
+    color: blue;
+    font-size: var(--xl-font-size);
+    font-weight: bold;
+  }
+}
+
+@mixin grow-box {
+  max-height: 0;
+  overflow: hidden;
+
+  &--visable {
+    max-height: 7rem;
+    overflow: hidden;
+
+    text-align: center;
+    padding-top: 2rem;
+    transition: all 0.7s;
+  }
 }
 
 //keyframes

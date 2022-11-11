@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useRef, useContext } from "react";
 import FormElements from "../../components/form/FormElements";
 import { ValuesContext } from "../../context/ValuesContext";
 
@@ -7,6 +7,8 @@ import styles from "./styles/TdeeCalculator.module.css";
 export default function TdeeCalculator() {
   const [lightCardio, setLightCardio] = useState(null);
   const [hardCardio, setHardCardio] = useState(null);
+
+  const result = useRef();
 
   const { bmrState, tdeeState, setTdeeState } = useContext(ValuesContext);
 
@@ -21,6 +23,7 @@ export default function TdeeCalculator() {
       10;
 
     setTdeeState(tdee);
+    result.current.classList.add(styles["tdee-container--visable"]);
   };
 
   return (
@@ -61,7 +64,11 @@ export default function TdeeCalculator() {
         </p>
         <button type="submit">Calculate</button>
       </form>
-      <span>Your estimated TDEE is: {tdeeState}</span>
+      <div ref={result} className={styles["tdee-container"]}>
+        <span className={styles["result-message"]}>
+          Your estimated TDEE is: <span>{tdeeState}</span>
+        </span>
+      </div>
     </div>
   );
 }

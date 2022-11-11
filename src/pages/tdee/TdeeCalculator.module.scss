@@ -7,7 +7,31 @@
 .form {
   @include flex--col;
 
+  label,
+  button,
+  input {
+    font-size: var(--mid-font-size);
+  }
+
+  span {
+    display: block;
+    font-size: var(--small-font-size);
+  }
+
   .input {
+    margin-top: 1rem;
+    padding: 0.4rem;
+  }
+}
+
+.tdee-container {
+  @include grow-box;
+
+  .result-message {
+    @include result-message;
+
+    display: block;
+    text-align: center;
     margin-top: 1rem;
   }
 }
