@@ -1,0 +1,26 @@
+@import "../../vars";
+
+.tdeeText-container {
+  font-size: var(--high-mid-font-size);
+
+  span {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .food-comparison {
+    text-decoration: none;
+
+    &:nth-child(2) {
+      color: red;
+    }
+
+    &:nth-child(3) {
+      color: blue;
+    }
+  }
+
+  .text {
+    animation: fade 1s;
+  }
+}

@@ -1,0 +1,72 @@
+:root {
+  --box-shadow: 1px 2px 8px #999;
+  --box-shadow--light: 1px 2px 8px #bbb;
+  --transparent: rgba(0, 0, 0, 0);
+  --small-font-size: 1.2rem;
+  --low-mid-font-size: 1.6rem;
+  --mid-font-size: 1.8rem;
+  --high-mid-font-size: 2rem;
+  --large-font-size: 2.4rem;
+  --xl-font-size: 2.8rem;
+  --subtitle-font-size: 3.2rem;
+  --title-font-size: 4.8rem;
+  --sky-blue: #a9dfd8;
+  --pastel-green: #cce4d4;
+  --emerald: #85dac5;
+  --deep-green: #88cbc0;
+  --yellow: #e4f7d0;
+  --pastel-blue: #bcd8cf;
+  --grey-green: #94b7ad;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.tdeeText-container {
+  font-size: var(--high-mid-font-size);
+}
+.tdeeText-container span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.tdeeText-container .food-comparison {
+  text-decoration: none;
+}
+.tdeeText-container .food-comparison:nth-child(2) {
+  color: red;
+}
+.tdeeText-container .food-comparison:nth-child(3) {
+  color: blue;
+}
+.tdeeText-container .text {
+  animation: fade 1s;
+}/*# sourceMappingURL=TdeeText.module.css.map */
