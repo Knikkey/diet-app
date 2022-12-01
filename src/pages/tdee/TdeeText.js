@@ -17,15 +17,19 @@ export default function TdeeText() {
       <p>
         TDEE stands for <span>T</span>otal <span>D</span>aily <span>E</span>
         nergy <span>E</span>xpenditure and represents an estimate on how much
-        energy your body uses in a day. This takes your <span>BMR</span> into
-        account as well as things like exercise and non-exercise activities.
+        energy your body uses in a day. This is calculated by adding a few
+        things: First, your <span>BMR</span>, which you calculated earlier.
+        Second, your non-exercise activities, such as typing on a keyboard or
+        bobbing your head to music. Finally, your exercise activites, such as
+        resistance training or sports.
       </p>
 
       {tdeeState && (
         <>
           <p className={styles.text}>
             According to our calculations, your body requires about{" "}
-            <span>{tdeeState}</span> calories per day. That's like
+            <span>{tdeeState}</span> calories per day based on your reported
+            activity. That's like
             <span className={styles["food-comparison"]}>
               {" "}
               {foodComparisonPercent(tdeeState, 2080)}%{" "}

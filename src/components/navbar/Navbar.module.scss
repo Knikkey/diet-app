@@ -9,6 +9,7 @@
   overflow: hidden;
   z-index: 2;
   max-height: 7rem;
+  cursor: pointer;
 
   &__hide {
     max-height: 0;

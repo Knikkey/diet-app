@@ -59,6 +59,7 @@
   overflow: hidden;
   z-index: 2;
   max-height: 7rem;
+  cursor: pointer;
 }
 .nav__hide {
   max-height: 0;
@@ -103,4 +104,4 @@ ul .link:hover {
 }
 .bubble .shape-fill {
   fill: var(--pastel-blue);
-}/*# sourceMappingURL=Navbar.module.css.map */
+} /*# sourceMappingURL=Navbar.module.css.map */
