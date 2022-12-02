@@ -1,0 +1,131 @@
+:root {
+  --box-shadow: 1px 2px 8px #999;
+  --box-shadow--light: 1px 2px 8px #bbb;
+  --transparent: rgba(0, 0, 0, 0);
+  --small-font-size: 1.2rem;
+  --low-mid-font-size: 1.6rem;
+  --mid-font-size: 1.8rem;
+  --high-mid-font-size: 2rem;
+  --large-font-size: 2.4rem;
+  --xl-font-size: 2.8rem;
+  --subtitle-font-size: 3.2rem;
+  --title-font-size: 4.8rem;
+  --sky-blue: #a9dfd8;
+  --pastel-green: #cce4d4;
+  --emerald: #85dac5;
+  --deep-green: #88cbc0;
+  --yellow: #e4f7d0;
+  --pastel-blue: #bcd8cf;
+  --grey-green: #94b7ad;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  from {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+.slide .text-container {
+  font-size: var(--mid-font-size);
+}
+.slide .text-container .imgs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.slide .text-container .imgs .img {
+  height: 12rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.slide .img-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slide .lightning {
+  width: 15%;
+}
+.slide .calorimeter {
+  position: relative;
+  display: flex;
+  height: 60%;
+  width: 40%;
+  margin: 0 auto;
+  border: black 1px solid;
+}
+.slide .calorimeter::after {
+  content: "";
+  display: block;
+  align-self: flex-end;
+  width: 100%;
+  height: 75%;
+  background-color: #0e87cc;
+}
+.slide .calorimeter .drop {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 60%;
+  background-color: var(--pastel-green);
+  border: 1px black solid;
+  border-top: none;
+}
+.slide .calorimeter .tube {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  width: 10px;
+  height: 300px;
+  margin: auto;
+  background: linear-gradient(to right, #0a0, #dfd, #dfd, #dfd, #0a0);
+  border: 1px solid #aaa;
+  border-bottom: 0;
+  border-radius: 4px;
+}
+.slide .calorimeter .vein {
+  align-self: flex-end;
+  width: 80%;
+  height: 5px;
+  background-color: #e00;
+  border-radius: 4px;
+}/*# sourceMappingURL=Slide.module.css.map */
