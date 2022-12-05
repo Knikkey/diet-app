@@ -1,5 +1,35 @@
 @import "../../vars";
 
+@keyframes rise--ice-cream {
+  from {
+    height: 25.5%;
+  }
+
+  to {
+    height: 28.25%;
+  }
+}
+
+@keyframes rise--ceasar-salad {
+  from {
+    height: 25.5%;
+  }
+
+  to {
+    height: 32.25%;
+  }
+}
+
+@keyframes rise--quarter-pounder {
+  from {
+    height: 25.5%;
+  }
+
+  to {
+    height: 29.75%;
+  }
+}
+
 .slide {
   display: grid;
   grid-template-columns: 1fr 1fr;

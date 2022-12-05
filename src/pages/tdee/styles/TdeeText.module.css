@@ -84,30 +84,6 @@
     transform: scale(0%);
   }
 }
-@keyframes rise--ice-cream {
-  from {
-    height: 25.5%;
-  }
-  to {
-    height: 28.25%;
-  }
-}
-@keyframes rise--ceasar-salad {
-  from {
-    height: 25.5%;
-  }
-  to {
-    height: 32.25%;
-  }
-}
-@keyframes rise--quarter-pounder {
-  from {
-    height: 25.5%;
-  }
-  to {
-    height: 29.75%;
-  }
-}
 .tdeeText-container {
   font-size: var(--high-mid-font-size);
 }
