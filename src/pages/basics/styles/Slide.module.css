@@ -56,6 +56,11 @@
   grid-template-columns: 1fr 1fr;
   height: 100%;
 }
+.slide .img {
+  height: 12rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
 .slide .text-container {
   font-size: var(--mid-font-size);
 }
@@ -63,11 +68,6 @@
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
-}
-.slide .text-container .imgs .img {
-  height: 12rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
 }
 .slide .img-container {
   height: 100%;
@@ -96,8 +96,6 @@
   background-color: #0e87cc;
 }
 .slide .calorimeter .drop {
-  content: "";
-  display: block;
   position: absolute;
   top: -5%;
   left: 50%;
@@ -107,6 +105,9 @@
   background-color: var(--pastel-green);
   border: 1px black solid;
   border-top: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .slide .calorimeter .tube {
   position: absolute;

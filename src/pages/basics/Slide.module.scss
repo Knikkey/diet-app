@@ -6,6 +6,12 @@
 
   height: 100%;
 
+  .img {
+    height: 12rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
   .text-container {
     font-size: var(--mid-font-size);
 
@@ -13,12 +19,6 @@
       display: flex;
       justify-content: space-between;
       margin-top: 4rem;
-
-      .img {
-        height: 12rem;
-        aspect-ratio: 1;
-        border-radius: 50%;
-      }
     }
   }
 
@@ -51,8 +51,6 @@
 
     //container
     .drop {
-      content: "";
-      display: block;
       position: absolute;
       top: -5%;
       left: 50%;
@@ -62,6 +60,10 @@
       background-color: var(--pastel-green);
       border: 1px black solid;
       border-top: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .tube {

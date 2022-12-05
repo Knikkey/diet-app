@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useDrag, useDrop } from "react-dnd";
 import lightningcloud from "./lightningcloud.svg";
 import icecream from "../../components/imagesRep/images/icecream.webp";
 import chickenBreast from "../../components/imagesRep/images/chicken-breast.webp";
@@ -14,24 +13,32 @@ const pics = [
 ];
 
 export default function Slide2() {
-  const [selectedFood, setSelectedFood] = useState();
+  const [draggedFood, setDraggedFood] = useState();
+  const [selectedFood, setSelectedFood] = useState(false);
 
-  const [{ isDragging }, drag] = useDrag(() => ({
-    type: "img",
-    collect: (monitor) => ({
-      isDragging: !!monitor.isDragging(),
-    }),
-  }));
+  const dragStartHandler = (e) => {
+    setSelectedFood(false);
+    const check = pics.filter((pic) =>
+      pic.alt === e.target.alt ? true : false
+    );
+    setDraggedFood(check[0]);
+  };
 
-  const [{ isOver }, drop] = useDrop(() => ({
-    accept: "img",
-    drop: (item) => {
-      console.log(item);
-    },
-    collect: (monitor) => ({
-      isOver: !!monitor.isOver(),
-    }),
-  }));
+  const dragEnterHandler = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const dragOverHandler = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const dropHandler = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSelectedFood(true);
+  };
 
   return (
     <div className={styles.slide}>
@@ -61,7 +68,7 @@ export default function Slide2() {
               src={src}
               alt={alt}
               key={id}
-              ref={drag}
+              onDragStart={dragStartHandler}
               className={styles.img}
             />
           ))}
@@ -74,8 +81,19 @@ export default function Slide2() {
           className={styles.lightning}
         />
         <div className={styles.calorimeter}>
-          <div className={styles.drop} ref={drop}>
-            {selectedFood && { selectedFood }}
+          <div
+            className={styles.drop}
+            onDrop={dropHandler}
+            onDragEnter={dragEnterHandler}
+            onDragOver={dragOverHandler}
+          >
+            {selectedFood && (
+              <img
+                src={draggedFood.src}
+                alt={draggedFood.alt}
+                className={styles.img}
+              />
+            )}
           </div>
           <div className={styles.tube}>
             <div className={styles.vein}></div>
