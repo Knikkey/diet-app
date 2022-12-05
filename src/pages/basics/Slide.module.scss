@@ -28,6 +28,7 @@
   }
 
   .lightning {
+    opacity: 0;
     width: 15%;
   }
 
@@ -65,27 +66,53 @@
       align-items: center;
       justify-content: center;
     }
+  }
 
-    .tube {
-      position: absolute;
-      top: -20%;
-      right: 10%;
-      display: flex;
-      justify-content: center;
-      width: 10px;
-      height: 300px;
-      margin: auto;
-      background: linear-gradient(to right, #0a0, #dfd, #dfd, #dfd, #0a0);
-      border: 1px solid #aaa;
-      border-bottom: 0;
-      border-radius: 4px;
-    }
-    .vein {
-      align-self: flex-end;
-      width: 80%;
-      height: 5px;
-      background-color: #e00;
-      border-radius: 4px;
-    }
+  .tube {
+    position: absolute;
+    top: -20%;
+    right: 10%;
+    display: flex;
+    justify-content: center;
+    width: 10px;
+    height: 300px;
+    margin: auto;
+    background: linear-gradient(to right, #0a0, #dfd, #dfd, #dfd, #0a0);
+    border: 1px solid #aaa;
+    border-bottom: 0;
+    border-radius: 4px;
+  }
+  .vein,
+  .vein--ice-cream,
+  .vein--ceasar-salad,
+  .vein--quarter-pounder {
+    align-self: flex-end;
+    width: 80%;
+    height: 25.5%;
+    background-color: #e00;
+    border-radius: 4px;
+  }
+
+  .vein--ice-cream {
+    animation: rise--ice-cream 3s forwards;
+  }
+
+  .vein--ceasar-salad {
+    animation: rise--ceasar-salad 3s forwards;
+  }
+
+  .vein--quarter-pounder {
+    animation: rise--quarter-pounder 3s forwards;
+  }
+
+  //animations
+  .flash {
+    animation: flash 3s;
+  }
+  .glow {
+    animation: glow 3s ease-out;
+  }
+  .shrink {
+    animation: shrink 3s forwards;
   }
 }

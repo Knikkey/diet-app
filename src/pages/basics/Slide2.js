@@ -1,15 +1,20 @@
 import { useState } from "react";
 import lightningcloud from "./lightningcloud.svg";
 import icecream from "../../components/imagesRep/images/icecream.webp";
-import chickenBreast from "../../components/imagesRep/images/chicken-breast.webp";
+import costcoSalad from "../../components/imagesRep/images/costco-salad.webp";
 import quarterPounder from "../../components/imagesRep/images/quarter-pounder.webp";
 
 import styles from "./styles/Slide.module.css";
 
 const pics = [
-  { src: icecream, alt: "ice cream", id: 1 },
-  { src: chickenBreast, alt: "chicken breast", id: 2 },
-  { src: quarterPounder, alt: "quarter pounder", id: 3 },
+  { src: icecream, alt: "ice cream", id: 1, style: "ice-cream" },
+  { src: costcoSalad, alt: "chicken breast", id: 2, style: "ceasar-salad" },
+  {
+    src: quarterPounder,
+    alt: "quarter pounder",
+    id: 3,
+    style: "quarter-pounder",
+  },
 ];
 
 export default function Slide2() {
@@ -24,12 +29,7 @@ export default function Slide2() {
     setDraggedFood(check[0]);
   };
 
-  const dragEnterHandler = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
-
-  const dragOverHandler = (e) => {
+  const dragEnterOverHandler = (e) => {
     e.preventDefault();
     e.stopPropagation();
   };
@@ -78,25 +78,31 @@ export default function Slide2() {
         <img
           src={lightningcloud}
           alt="lightning cloud"
-          className={styles.lightning}
+          className={`${styles.lightning} ${selectedFood && styles.flash}`}
         />
         <div className={styles.calorimeter}>
           <div
-            className={styles.drop}
+            className={`${styles.drop} ${selectedFood && styles.glow}`}
             onDrop={dropHandler}
-            onDragEnter={dragEnterHandler}
-            onDragOver={dragOverHandler}
+            onDragEnter={dragEnterOverHandler}
+            onDragOver={dragEnterOverHandler}
           >
             {selectedFood && (
               <img
                 src={draggedFood.src}
                 alt={draggedFood.alt}
-                className={styles.img}
+                className={`${styles.img} ${selectedFood && styles.shrink}`}
               />
             )}
           </div>
           <div className={styles.tube}>
-            <div className={styles.vein}></div>
+            <div
+              className={
+                !selectedFood
+                  ? styles.vein
+                  : styles[`vein--${draggedFood.style}`]
+              }
+            ></div>
           </div>
         </div>
       </div>

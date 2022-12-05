@@ -27,6 +27,31 @@
     opacity: 1;
   }
 }
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 #f73718;
+  }
+  75% {
+    box-shadow: 0 0 30px 20px #f73718;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #f73718;
+  }
+}
 @keyframes grow {
   from {
     transform: scale(0, 0);
@@ -49,6 +74,38 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes shrink {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(0%);
+  }
+}
+@keyframes rise--ice-cream {
+  from {
+    height: 25.5%;
+  }
+  to {
+    height: 28.25%;
+  }
+}
+@keyframes rise--ceasar-salad {
+  from {
+    height: 25.5%;
+  }
+  to {
+    height: 32.25%;
+  }
+}
+@keyframes rise--quarter-pounder {
+  from {
+    height: 25.5%;
+  }
+  to {
+    height: 29.75%;
   }
 }
 .slide {
@@ -77,6 +134,7 @@
   justify-content: center;
 }
 .slide .lightning {
+  opacity: 0;
   width: 15%;
 }
 .slide .calorimeter {
@@ -109,7 +167,7 @@
   align-items: center;
   justify-content: center;
 }
-.slide .calorimeter .tube {
+.slide .tube {
   position: absolute;
   top: -20%;
   right: 10%;
@@ -123,10 +181,31 @@
   border-bottom: 0;
   border-radius: 4px;
 }
-.slide .calorimeter .vein {
+.slide .vein,
+.slide .vein--ice-cream,
+.slide .vein--ceasar-salad,
+.slide .vein--quarter-pounder {
   align-self: flex-end;
   width: 80%;
-  height: 5px;
+  height: 25.5%;
   background-color: #e00;
   border-radius: 4px;
+}
+.slide .vein--ice-cream {
+  animation: rise--ice-cream 3s forwards;
+}
+.slide .vein--ceasar-salad {
+  animation: rise--ceasar-salad 3s forwards;
+}
+.slide .vein--quarter-pounder {
+  animation: rise--quarter-pounder 3s forwards;
+}
+.slide .flash {
+  animation: flash 3s;
+}
+.slide .glow {
+  animation: glow 3s ease-out;
+}
+.slide .shrink {
+  animation: shrink 3s forwards;
 }/*# sourceMappingURL=Slide.module.css.map */
