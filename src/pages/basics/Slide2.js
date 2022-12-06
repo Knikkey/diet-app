@@ -56,6 +56,7 @@ export default function Slide2() {
   return (
     <div className={styles.slide}>
       <div className={styles["text-container"]}>
+        <span className={styles.title}>What is a calorie?</span>
         <p>
           First, we need to understand what a calorie is. A calorie is a
           measurement of energy, just like how a gram is a measurement of
