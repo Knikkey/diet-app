@@ -1,5 +1,46 @@
 @import "../../vars";
 
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0 #f73718;
+  }
+
+  75% {
+    box-shadow: 0 0 30px 20px #f73718;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #f73718;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes rise--ice-cream {
   from {
     height: 25.5%;
@@ -30,6 +71,30 @@
   }
 }
 
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(0%);
+  }
+}
+
 .slide {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -57,7 +122,15 @@
     @include flex--col--center;
   }
 
+  .temp-reading {
+    margin: 0;
+    padding: 0;
+    font-size: var(--large-font-size);
+    animation: reveal 3s linear;
+  }
+
   .lightning {
+    margin: 0;
     opacity: 0;
     width: 15%;
   }

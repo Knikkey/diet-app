@@ -7,13 +7,26 @@ import quarterPounder from "../../components/imagesRep/images/quarter-pounder.we
 import styles from "./styles/Slide.module.css";
 
 const pics = [
-  { src: icecream, alt: "ice cream", id: 1, style: "ice-cream" },
-  { src: costcoSalad, alt: "chicken breast", id: 2, style: "ceasar-salad" },
+  {
+    src: icecream,
+    alt: "ice cream",
+    id: 1,
+    style: "ice-cream",
+    tempDifference: "2.7℃",
+  },
+  {
+    src: costcoSalad,
+    alt: "chicken breast",
+    id: 2,
+    style: "ceasar-salad",
+    tempDifference: "7℃",
+  },
   {
     src: quarterPounder,
     alt: "quarter pounder",
     id: 3,
     style: "quarter-pounder",
+    tempDifference: "4.2℃",
   },
 ];
 
@@ -75,6 +88,13 @@ export default function Slide2() {
         </div>
       </div>
       <div className={styles["img-container"]}>
+        {!selectedFood && <p className={styles["temp-reading"]}>&nbsp;</p>}
+        {selectedFood && (
+          <p className={styles["temp-reading"]}>
+            + {draggedFood.tempDifference}
+          </p>
+        )}
+
         <img
           src={lightningcloud}
           alt="lightning cloud"
