@@ -12,21 +12,21 @@ const pics = [
     alt: "ice cream",
     id: 1,
     style: "ice-cream",
-    tempDifference: "2.7℃",
+    tempDifference: "2.7",
   },
   {
     src: costcoSalad,
     alt: "chicken breast",
     id: 2,
     style: "ceasar-salad",
-    tempDifference: "7℃",
+    tempDifference: "7",
   },
   {
     src: quarterPounder,
     alt: "quarter pounder",
     id: 3,
     style: "quarter-pounder",
-    tempDifference: "4.2℃",
+    tempDifference: "4.2",
   },
 ];
 
@@ -64,16 +64,18 @@ export default function Slide2() {
           Celsius. That means when we're talking about calories from food, we're
           talking about how much energy we get from eating that food.
         </p>
-        <p>
-          Fun fact: calories used to be measured with a device called a{" "}
-          <b>bomb calorimeter</b>. Food would be placed in a container
-          surrounded by water. The food would be burned electrically and the
-          change in water temperature would be recorded.
+        <p className="italic">
+          Fun fact: Calories used to be measured with a device called a{" "}
+          <span className="bold">bomb calorimeter</span>. Food would be placed
+          in a container surrounded by water. The food would be burned
+          electrically and the change in water temperature would be recorded.
         </p>
         <p>
-          Drag and drop food items into our <b>bomb calorimeter</b> to see how
-          many calories it has. Our <b>bomb calorimeter</b> has 100g of water,
-          so an increase of 1 degree Celsius would mean 100 calories.
+          Drag and drop food items into our{" "}
+          <span className="bold">bomb calorimeter</span> to see how many
+          calories it has. Our <span className="bold">bomb calorimeter</span>{" "}
+          has 100g of water, so an increase of 1 degree Celsius would mean 100
+          calories.
         </p>
         <div className={styles["imgs"]}>
           {pics.map(({ src, alt, id }) => (
@@ -91,7 +93,8 @@ export default function Slide2() {
         {!selectedFood && <p className={styles["temp-reading"]}>&nbsp;</p>}
         {selectedFood && (
           <p className={styles["temp-reading"]}>
-            + {draggedFood.tempDifference}
+            + {draggedFood.tempDifference}℃ &#8594;{" "}
+            {Number(draggedFood.tempDifference * 100)} calories
           </p>
         )}
 
