@@ -26,4 +26,22 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: var(--yellow);
+}
+.tdee--wait {
+  padding: 6rem 3rem;
+  height: 100vh;
+  position: relative;
+  display: block;
+  background-color: var(--yellow);
+}
+
+.wait {
+  font-size: var(--title-font-size);
+  font-weight: bold;
+  text-align: center;
+}
+
+.wait-text {
+  font-size: var(--large-font-size);
+  text-align: center;
 }/*# sourceMappingURL=Tdee.module.css.map */
