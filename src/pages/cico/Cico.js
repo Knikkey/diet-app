@@ -1,4 +1,5 @@
 import Divider from "../../components/divider/Divider";
+import weightGainGif from "./weight-gain-gif.webp";
 
 import styles from "./styles/Cico.module.css";
 
@@ -10,16 +11,33 @@ export default function Cico({ id }) {
         <p>
           CICO stands for Calories In, Calories Out. As we know from the first
           law of thermodynamics, energy cannot be created or destroyed.
-          Therefore, when we consume more caloires than our bodies can use, our
+          Therefore, when we consume more calories than our bodies can use, our
           bodies save the excess energy as body fat. When the opposite happens,
-          our bodies break down fat to be used as energy. So, the weight-loss
-          formula is simple: consume less calories than you use.
+          our bodies break down body fat to be used as energy. So, if you want
+          to lose weight, you just need to consume less calories than you burn.
         </p>
         <p>
-          There are many ways to execute this. We'll look at the most hands-on
-          method: counting calories. At the end, we'll briefly go over other
-          methods in case counting calories isn't for you. Let's start by
-          estimating how many calories you burn in a day.
+          "Why eat less?", you might be wondering. "Instead of lowering the
+          Calories In part, can't we raise the Calories Out?" You most certainly
+          can, but it's harder to do. Take this example:
+        </p>
+        <p>
+          An average person will burn around 100 calories per mile ran. A
+          Quarter Pounder With Cheese is over 400 calories. Which seems easier,
+          running over 4 miles, or not eating that burger?
+        </p>
+        <img
+          src={weightGainGif}
+          alt="gif of a sheep eating food and becoming larger"
+          className={styles.img}
+        />
+        <p>
+          Consuming less calories than what you burn is commonly known as a
+          calorie deficit. There are many ways to cause a calorie deficit, but
+          we'll be looking at the most hands-on, tried and true method: counting
+          calories. At the end, we'll briefly go over other methods in case
+          counting calories isn't for you. Let's start by estimating how many
+          calories you burn in a day.
         </p>
       </div>
       <Divider color="emerald" />

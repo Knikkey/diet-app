@@ -35,4 +35,10 @@
 
 .text-container {
   font-size: var(--mid-font-size);
+}
+
+.img {
+  display: block;
+  height: 20rem;
+  margin: 2rem auto;
 }/*# sourceMappingURL=Cico.module.css.map */
