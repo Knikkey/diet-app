@@ -24,6 +24,7 @@
   height: 100vh;
   position: relative;
   background-color: var(--pastel-green);
+  margin: 0 auto;
 }
 .basics .test {
   font-size: var(--mid-font-size);

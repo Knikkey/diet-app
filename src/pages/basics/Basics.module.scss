@@ -3,6 +3,7 @@
 .basics {
   @include section;
   background-color: var(--pastel-green);
+  margin: 0 auto;
 
   .test {
     font-size: var(--mid-font-size);
