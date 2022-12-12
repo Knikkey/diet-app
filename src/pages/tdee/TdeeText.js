@@ -18,10 +18,13 @@ export default function TdeeText() {
         TDEE stands for <span>T</span>otal <span>D</span>aily <span>E</span>
         nergy <span>E</span>xpenditure and represents an estimate on how much
         energy your body uses in a day. This is calculated by adding a few
-        things: First, your <span>BMR</span>, which you calculated earlier.
-        Second, your non-exercise activities, such as typing on a keyboard or
-        bobbing your head to music. Finally, your exercise activites, such as
-        resistance training or sports.
+        things to your <span>BMR</span>. First, we add your non-exercise
+        activities, such as typing on a keyboard or bobbing your head to music.
+        This is otherwise known as <span>NEAT</span>, or <span>N</span>on{" "}
+        <span>E</span>
+        xercise <span>A</span>ctivity
+        <span>T</span>hermogenesis. Second, we add your exercise-related activites, such
+        as resistance training or sports.
       </p>
 
       {tdeeState && (

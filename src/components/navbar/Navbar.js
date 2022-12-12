@@ -4,7 +4,8 @@ import styles from "./styles/Navbar.module.css";
 
 const links = [
   { href: "home", label: "Home" },
-  { href: "basics", label: "Weight Loss 101" },
+  { href: "calories", label: "What's a calorie?" },
+  { href: "cico", label: "CICO" },
   { href: "bmr", label: "BMR Calculator" },
   { href: "tdee", label: "TDEE Calculator" },
   { href: "faqs", label: "FAQs" },
