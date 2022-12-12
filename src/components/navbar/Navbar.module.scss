@@ -20,6 +20,9 @@
   position: fixed;
   width: 100%;
   transition: all 0.7s;
+  background-color: var(--pastel-blue);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 
   overflow: hidden;
   z-index: 2;
@@ -53,28 +56,5 @@ ul {
     &:hover {
       color: #555;
     }
-  }
-}
-
-.bubble {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-
-  overflow: hidden;
-  z-index: -1;
-
-  svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 80px;
-  }
-
-  .shape-fill {
-    fill: var(--pastel-blue);
   }
 }
