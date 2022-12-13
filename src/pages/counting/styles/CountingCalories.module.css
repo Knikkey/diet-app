@@ -32,16 +32,15 @@
 .text-container {
   font-size: var(--mid-font-size);
 }
-.text-container p {
+.text-container p,
+.text-container div {
   background-color: white;
   padding: 1.5rem;
   margin: 0.5rem;
   border-radius: 15px;
 }
-.text-container p p {
-  padding: 0.5rem;
-}
-.text-container p span {
+.text-container p span,
+.text-container div span {
   font-weight: bold;
   text-decoration: underline;
 }

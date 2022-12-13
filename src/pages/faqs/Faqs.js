@@ -18,9 +18,8 @@ export default function Faqs({ id }) {
   const [active, setActive] = useState();
 
   const faqRevealHandler = (e) => {
-    setActive(e.target.key);
+    setActive(e.target.id);
   };
-  console.log(active);
 
   return (
     <div id={id} className={styles.faqs}>
@@ -32,12 +31,17 @@ export default function Faqs({ id }) {
       <div className={styles["faqs-container"]}>
         <div className={styles["questions-container"]}>
           {faqs.map((faq, i) => (
-            <button key={i} onClick={faqRevealHandler}>
+            <button
+              className={active === i ? `${styles.active}` : ""}
+              id={i}
+              key={i}
+              onClick={faqRevealHandler}
+            >
               {faq}
             </button>
           ))}
         </div>
-        <div className={styles.answers}></div>
+        <div className={styles.answers}>{active && <p>{faqs[active]}</p>}</div>
       </div>
 
       <Divider color="sky-blue" />

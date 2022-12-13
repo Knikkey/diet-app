@@ -32,11 +32,11 @@
         border-radius: 15px;
         background-color: white;
         cursor: pointer;
+      }
 
-        &:hover,
-        .active {
-          background-color: #eee;
-        }
+      button:hover,
+      .active {
+        background: #eee;
       }
     }
   }

@@ -13,7 +13,7 @@ export default function CountingCalories({ id }) {
           left is to figure out how to count calories and how many calories you
           should be consuming to lose weight.
         </p>
-        <p>
+        <div>
           Your TDEE minus 500 is a good starting point. There are 2 reasons for
           why we choose the number 500:
           <ul>
@@ -36,7 +36,7 @@ export default function CountingCalories({ id }) {
               hinder your performance or health.
             </li>
           </ul>
-        </p>
+        </div>
         <p>
           As for how to track your calorie intake, you can simply look at the
           label of whatever you're eating and keep a note. Many restaurants have

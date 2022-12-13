@@ -25,7 +25,7 @@ export default function Cico({ id }) {
           as energy. So, if you want to lose weight, you just need to consume
           less calories than you burn.
         </p>
-        <p>
+        <div>
           "Why eat less?", you might be wondering. "Instead of lowering the
           Calories In part, can't we raise the Calories Out?" You most certainly
           can, but it's harder to do. Take this example:
@@ -36,7 +36,7 @@ export default function Cico({ id }) {
               easier, running over 4 miles, or not eating that burger?
             </li>
           </ul>
-        </p>
+        </div>
 
         <p>
           Consuming less calories than what you burn is commonly known as a

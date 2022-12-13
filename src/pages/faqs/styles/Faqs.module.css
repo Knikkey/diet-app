@@ -55,6 +55,6 @@
   cursor: pointer;
 }
 .faqs .faqs-container .questions-container button:hover,
-.faqs .faqs-container .questions-container button .active {
-  background-color: #eee;
+.faqs .faqs-container .questions-container .active {
+  background: #eee;
 }/*# sourceMappingURL=Faqs.module.css.map */
