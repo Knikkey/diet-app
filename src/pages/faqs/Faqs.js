@@ -32,7 +32,7 @@ export default function Faqs({ id }) {
         <div className={styles["questions-container"]}>
           {faqs.map((faq, i) => (
             <button
-              className={active == i ? `${styles.active}` : ""}
+              className={active === i.toString() ? `${styles.active}` : ""}
               id={i}
               key={i}
               onClick={faqRevealHandler}
