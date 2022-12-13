@@ -4,8 +4,7 @@
   font-size: var(--high-mid-font-size);
 
   span {
-    font-weight: bold;
-    text-decoration: underline;
+    @include emp;
   }
 
   .food-comparison {

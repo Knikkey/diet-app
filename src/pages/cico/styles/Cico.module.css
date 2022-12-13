@@ -28,36 +28,29 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
-
-.title {
-  font-size: var(--title-font-size);
-  font-weight: bold;
-  text-align: center;
-}
-
-.text-container {
+.cico .text-container {
   font-size: var(--mid-font-size);
 }
-.text-container p {
+.cico .text-container span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.cico .text-container p {
   background-color: white;
   padding: 1.5rem;
   margin: 0.5rem;
   border-radius: 15px;
 }
-.text-container p p {
+.cico .text-container p p {
   padding: 0.5rem;
 }
-.text-container p span {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.img-container {
+.cico .img-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-.img-container .img {
-  display: block;
-  height: 25rem;
+.cico .img-container img {
+  height: 80%;
 }/*# sourceMappingURL=Cico.module.css.map */

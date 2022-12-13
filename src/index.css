@@ -21,8 +21,16 @@ html {
   box-sizing: border-box;
 }
 
-h1 {
+h1,
+h2 {
   margin-top: 0;
+}
+
+.title {
+  font-size: var(--title-font-size);
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
 }
 
 .bold {
@@ -31,4 +39,9 @@ h1 {
 
 .italic {
   font-style: italic;
+}
+
+.emp {
+  font-weight: bold;
+  text-decoration: underline;
 }

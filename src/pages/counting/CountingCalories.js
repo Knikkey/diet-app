@@ -7,7 +7,7 @@ export default function CountingCalories({ id }) {
   return (
     <div id={id} className={styles.counting}>
       <div className={styles["text-container"]}>
-        <span className={styles.title}>Counting Calories</span>
+        <h2 className="title">Counting Calories</h2>
         <p>
           Now that we have an estimate of how many calories you burn, all that's
           left is to figure out how to count calories and how many calories you
@@ -16,24 +16,26 @@ export default function CountingCalories({ id }) {
         <p>
           Your TDEE minus 500 is a good starting point. There are 2 reasons for
           why we choose the number 500:
-          <p>
-            First, 1 pound of fat was estimated to be about 3500 calories worth
-            of energy. If we divide that number by 7 for each day of the week,
-            it comes out to a 500 calorie deficit daily to lose 1 pound of fat a
-            week.
-          </p>
-          <p>
-            A 500 calorie deficit provides decent cushioning for errors in our
-            CICO estimates. Remember, your TDEE is an <span>estimate</span>. In
-            reality, it could be quite a bit higher or lower. On top of that,
-            your actual energy expenditure is not static. It will change
-            slightly day to day depending on a number of factors such as
-            activity levels, stress, sleep quality, and more. You may also end
-            up miscounting your calorie intake, which is very common. A 500
-            calorie deficit is large enough for an accidental calorie surplus to
-            be unlikely, while also being small enough to not greatly hinder
-            your performance or health.
-          </p>
+          <ul>
+            <li>
+              First, 1 pound of fat was estimated to be about 3500 calories
+              worth of energy. If we divide that number by 7 for each day of the
+              week, it comes out to a 500 calorie deficit daily to lose 1 pound
+              of fat a week.
+            </li>
+            <li>
+              A 500 calorie deficit provides decent cushioning for errors in our
+              CICO estimates. Remember, your TDEE is an <span>estimate</span>.
+              In reality, it could be quite a bit higher or lower. On top of
+              that, your actual energy expenditure is not static. It will change
+              slightly day to day depending on a number of factors such as
+              activity levels, stress, sleep quality, and more. You may also end
+              up miscounting your calorie intake, which is very common. A 500
+              calorie deficit is large enough for an accidental calorie surplus
+              to be unlikely, while also being small enough to not greatly
+              hinder your performance or health.
+            </li>
+          </ul>
         </p>
         <p>
           As for how to track your calorie intake, you can simply look at the

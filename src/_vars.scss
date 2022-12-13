@@ -27,6 +27,17 @@
 }
 
 //mixins
+@mixin absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin emp {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 @mixin flex--col {
   display: flex;
   flex-direction: column;
@@ -37,18 +48,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-@mixin absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@mixin section {
-  padding: 6rem 3rem;
-  height: 100vh;
-  position: relative;
 }
 
 @mixin form-container {
@@ -77,16 +76,6 @@
   }
 }
 
-@mixin result-message {
-  font-size: var(--large-font-size);
-
-  span {
-    color: blue;
-    font-size: var(--xl-font-size);
-    font-weight: bold;
-  }
-}
-
 @mixin grow-box {
   max-height: 0;
   overflow: hidden;
@@ -99,4 +88,20 @@
     padding-top: 2rem;
     transition: all 0.7s;
   }
+}
+
+@mixin result-message {
+  font-size: var(--large-font-size);
+
+  span {
+    color: blue;
+    font-size: var(--xl-font-size);
+    font-weight: bold;
+  }
+}
+
+@mixin section {
+  padding: 6rem 3rem;
+  height: 100vh;
+  position: relative;
 }

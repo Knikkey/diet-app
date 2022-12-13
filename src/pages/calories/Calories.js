@@ -57,7 +57,7 @@ export default function Calories({ id }) {
     <div id={id} className={styles.basics}>
       <div id={id} className={styles.slide}>
         <div className={styles["text-container"]}>
-          <span className={styles.title}>What is a calorie?</span>
+          <h2 className="title">What is a calorie?</h2>
           <p>
             First, we need to understand what a calorie is. A calorie is a
             measurement of energy, just like how a gram is a measurement of

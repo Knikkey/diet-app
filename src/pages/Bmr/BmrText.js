@@ -13,7 +13,7 @@ export default function BmrText() {
 
   return (
     <div className={styles["bmrText-container"]}>
-      <h1>What is BMR?</h1>
+      <h2 className="title">What is BMR?</h2>
       <p>
         BMR stands for <span>B</span>asal <span>M</span>etabolic <span>R</span>
         ate and represents an estimate on how much energy your body uses just to

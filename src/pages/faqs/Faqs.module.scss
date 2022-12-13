@@ -2,5 +2,42 @@
 
 .faqs {
   @include section;
-  background-color: var(--deep-green);
+  background-color: var(--emerald);
+
+  .text {
+    font-size: var(--mid-font-size);
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 15px;
+    width: fit-content;
+  }
+
+  .faqs-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+
+    .questions-container {
+      @include flex--col;
+      width: fit-content;
+      gap: 1rem;
+
+      button {
+        font-size: var(--mid-font-size);
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+        background-color: white;
+        cursor: pointer;
+
+        &:hover,
+        .active {
+          background-color: #eee;
+        }
+      }
+    }
+  }
 }

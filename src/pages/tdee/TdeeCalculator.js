@@ -28,7 +28,7 @@ export default function TdeeCalculator() {
 
   return (
     <div className={styles["calc-container"]}>
-      <h1>TDEE Calculator</h1>
+      <h2 className="title">TDEE Calculator</h2>
       <form onSubmit={formHandler} className={styles.form}>
         <FormElements
           label="Hours of light cardio exercise per week"

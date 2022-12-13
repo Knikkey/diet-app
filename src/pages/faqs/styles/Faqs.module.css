@@ -23,5 +23,38 @@
   padding: 6rem 3rem;
   height: 100vh;
   position: relative;
-  background-color: var(--deep-green);
+  background-color: var(--emerald);
+}
+.faqs .text {
+  font-size: var(--mid-font-size);
+  background-color: white;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 15px;
+  width: fit-content;
+}
+.faqs .faqs-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+}
+.faqs .faqs-container .questions-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 1rem;
+}
+.faqs .faqs-container .questions-container button {
+  font-size: var(--mid-font-size);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  background-color: white;
+  cursor: pointer;
+}
+.faqs .faqs-container .questions-container button:hover,
+.faqs .faqs-container .questions-container button .active {
+  background-color: #eee;
 }/*# sourceMappingURL=Faqs.module.css.map */

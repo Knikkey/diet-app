@@ -52,7 +52,7 @@ export default function Calculator() {
 
   return (
     <div className={styles["calc-container"]}>
-      <h1>BMR Calculator</h1>
+      <h2 className="title">BMR Calculator</h2>
 
       <form className={styles.form} onSubmit={formHandler}>
         <Radio

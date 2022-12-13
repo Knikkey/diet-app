@@ -14,25 +14,28 @@ export default function Cico({ id }) {
         />
       </div>
       <div className={styles["text-container"]}>
-        <span className={styles.title}>What is CICO?</span>
+        <h2 className="title">What is CICO?</h2>
         <p>
           <span>CICO</span> stands for <span>C</span>alories <span>I</span>n,{" "}
-          <span>C</span>alories <span>O</span>ut. As we know from the first law
-          of thermodynamics, energy cannot be created or destroyed. Therefore,
-          when we consume more calories than our bodies can use, our bodies save
-          the excess energy as body fat. When the opposite happens, our bodies
-          break down body fat to be used as energy. So, if you want to lose
-          weight, you just need to consume less calories than you burn.
+          <span>C</span>alories <span>O</span>
+          ut. As we know from the first law of thermodynamics, energy cannot be
+          created or destroyed. Therefore, when we consume more calories than
+          our bodies can use, our bodies save the excess energy as body fat.
+          When the opposite happens, our bodies break down body fat to be used
+          as energy. So, if you want to lose weight, you just need to consume
+          less calories than you burn.
         </p>
         <p>
           "Why eat less?", you might be wondering. "Instead of lowering the
           Calories In part, can't we raise the Calories Out?" You most certainly
           can, but it's harder to do. Take this example:
-          <p>
-            An average person will burn around 100 calories per mile ran. A
-            Quarter Pounder With Cheese is over 400 calories. Which seems
-            easier, running over 4 miles, or not eating that burger?
-          </p>
+          <ul>
+            <li>
+              An average person will burn around 100 calories per mile ran. A
+              Quarter Pounder With Cheese is over 400 calories. Which seems
+              easier, running over 4 miles, or not eating that burger?
+            </li>
+          </ul>
         </p>
 
         <p>

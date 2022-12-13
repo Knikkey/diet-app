@@ -7,41 +7,35 @@
 
   display: grid;
   grid-template-columns: 1fr 2fr;
-}
 
-.title {
-  font-size: var(--title-font-size);
-  font-weight: bold;
-  text-align: center;
-}
-
-.text-container {
-  font-size: var(--mid-font-size);
-
-  p {
-    background-color: white;
-    padding: 1.5rem;
-    margin: 0.5rem;
-    border-radius: 15px;
-
-    p {
-      padding: 0.5rem;
-    }
+  .text-container {
+    font-size: var(--mid-font-size);
 
     span {
-      font-weight: bold;
-      text-decoration: underline;
+      @include emp;
+    }
+
+    p {
+      background-color: white;
+      padding: 1.5rem;
+      margin: 0.5rem;
+      border-radius: 15px;
+
+      p {
+        padding: 0.5rem;
+      }
     }
   }
-}
 
-.img-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 
-  .img {
-    display: block;
-    height: 25rem;
+    img {
+      height: 80%;
+    }
   }
 }

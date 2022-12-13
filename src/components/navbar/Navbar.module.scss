@@ -1,20 +1,5 @@
 @import "../../vars";
 
-@keyframes shake {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(4deg);
-  }
-  50% {
-    transform: rotate(-4deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .nav {
   padding: 1rem 2rem;
   position: fixed;
@@ -36,25 +21,40 @@
       max-height: 10rem;
     }
   }
+
+  ul {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    list-style: none;
+
+    li:hover {
+      animation: shake 0.8s;
+    }
+
+    .link {
+      text-decoration: none;
+      font-size: var(--high-mid-font-size);
+      color: #111;
+
+      &:hover {
+        color: #555;
+      }
+    }
+  }
 }
 
-ul {
-  display: flex;
-  gap: 4rem;
-  justify-content: center;
-  list-style: none;
-
-  li:hover {
-    animation: shake 0.8s;
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
   }
-
-  .link {
-    text-decoration: none;
-    font-size: var(--high-mid-font-size);
-    color: #111;
-
-    &:hover {
-      color: #555;
-    }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
