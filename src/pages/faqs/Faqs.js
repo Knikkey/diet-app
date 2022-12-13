@@ -18,7 +18,7 @@ export default function Faqs({ id }) {
   const [active, setActive] = useState();
 
   const faqRevealHandler = (e) => {
-    setActive(e.target.id);
+    setActive(e.target.id.toString());
   };
 
   return (
@@ -32,7 +32,7 @@ export default function Faqs({ id }) {
         <div className={styles["questions-container"]}>
           {faqs.map((faq, i) => (
             <button
-              className={active === i ? `${styles.active}` : ""}
+              className={active == i ? `${styles.active}` : ""}
               id={i}
               key={i}
               onClick={faqRevealHandler}
