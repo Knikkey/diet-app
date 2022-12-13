@@ -46,6 +46,12 @@
 .slide .text-container {
   font-size: var(--mid-font-size);
 }
+.slide .text-container p {
+  background-color: white;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  border-radius: 15px;
+}
 .slide .text-container .imgs {
   display: flex;
   justify-content: space-between;

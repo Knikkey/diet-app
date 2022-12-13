@@ -19,14 +19,14 @@
   --grey-green: #94b7ad;
 }
 
-.cico {
+.counting {
   padding: 6rem 3rem;
   height: 100vh;
   position: relative;
   background-color: var(--pastel-green);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 .title {
@@ -57,7 +57,6 @@
   align-items: center;
   justify-content: center;
 }
-.img-container .img {
-  display: block;
-  height: 25rem;
-}/*# sourceMappingURL=Cico.module.css.map */
+.img-container img {
+  height: 50rem;
+}/*# sourceMappingURL=CountingCalories.module.css.map */

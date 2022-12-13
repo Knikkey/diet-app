@@ -4,6 +4,7 @@ import Calories from "./pages/calories/Calories";
 import Cico from "./pages/cico/Cico";
 import Bmr from "./pages/Bmr/Bmr";
 import Tdee from "./pages/tdee/Tdee";
+import CountingCalories from "./pages/counting/CountingCalories";
 import Faqs from "./pages/faqs/Faqs";
 
 import "./App.css";
@@ -17,6 +18,7 @@ function App() {
       <Cico id="cico" />
       <Bmr id="bmr" />
       <Tdee id="tdee" />
+      <CountingCalories id="counting" />
       <Faqs id="faqs" />
     </div>
   );

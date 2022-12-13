@@ -8,6 +8,7 @@ const links = [
   { href: "cico", label: "CICO" },
   { href: "bmr", label: "BMR Calculator" },
   { href: "tdee", label: "TDEE Calculator" },
+  { href: "counting", label: "Counting Calories" },
   { href: "faqs", label: "FAQs" },
 ];
 
