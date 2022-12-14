@@ -1,13 +1,14 @@
 import { useState } from "react";
+import FaqsAnswers from "./FaqsAnswers";
 import Divider from "../../components/divider/Divider";
 
 import styles from "./styles/Faqs.module.css";
 
 const faqs = [
   "I'm not losing weight. CICO is a lie!",
-  "Do I have to eat the same amount every day?",
+  "I'm hungry. What do I do?",
   "Do I need to exercise?",
-  "Are calories all that matter?",
+  "Are calories all that matter for weight loss?",
   "I don't want to count calories. What else can I do?",
   "My social life is taking a hit. What can I do?",
   "I want to make a huge deficit to lose weight ASAP.",
@@ -41,7 +42,9 @@ export default function Faqs({ id }) {
             </button>
           ))}
         </div>
-        <div className={styles.answers}>{active && <p>{faqs[active]}</p>}</div>
+        <div className={styles["answers-container"]}>
+          {active && <p>{FaqsAnswers[active]}</p>}
+        </div>
       </div>
 
       <Divider color="sky-blue" />

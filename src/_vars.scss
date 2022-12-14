@@ -5,7 +5,7 @@
   --transparent: rgba(0, 0, 0, 0);
 
   //text
-  --small-font-size: 1.2rem;
+  --small-font-size: 1.4rem;
   --low-mid-font-size: 1.6rem;
   --mid-font-size: 1.8rem;
   --high-mid-font-size: 2rem;
@@ -101,7 +101,7 @@
 }
 
 @mixin section {
-  padding: 6rem 3rem;
+  padding: 2rem 3rem;
   height: 100vh;
   position: relative;
 }

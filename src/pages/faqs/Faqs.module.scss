@@ -40,4 +40,15 @@
       }
     }
   }
+
+  .answers-container {
+    padding: 1rem;
+    background-color: #eee;
+    border-radius: 15px;
+    font-size: var(--small-font-size);
+
+    span {
+      font-weight: bold;
+    }
+  }
 }

@@ -1,0 +1,12 @@
+.answer {
+  animation: fade 1.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Answers.module.css.map */
