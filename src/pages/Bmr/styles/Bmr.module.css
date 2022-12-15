@@ -20,10 +20,10 @@
 }
 
 .bmr {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
   padding: 2rem 3rem;
   height: 100vh;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   background-color: var(--emerald);
 }/*# sourceMappingURL=Bmr.module.css.map */

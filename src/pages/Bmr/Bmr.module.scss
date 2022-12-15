@@ -1,9 +1,8 @@
 @import "../../vars";
 
 .bmr {
+  @include section;
   display: grid;
   grid-template-columns: 1fr 2fr;
-
-  @include section;
   background-color: var(--emerald);
 }
