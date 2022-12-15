@@ -1,6 +1,6 @@
 import { useState, useRef, useContext } from "react";
-import FormElements from "../../components/form/FormElements";
 import { ValuesContext } from "../../context/ValuesContext";
+import FormElements from "../../components/form/FormElements";
 
 import styles from "./styles/TdeeCalculator.module.css";
 

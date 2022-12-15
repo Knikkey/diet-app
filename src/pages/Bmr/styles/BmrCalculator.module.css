@@ -95,11 +95,10 @@
   padding-top: 2rem;
   transition: all 0.7s;
 }
-
-.result-message {
+.bmr-container .result-message {
   font-size: var(--large-font-size);
 }
-.result-message span {
+.bmr-container .result-message span {
   color: blue;
   font-size: var(--xl-font-size);
   font-weight: bold;

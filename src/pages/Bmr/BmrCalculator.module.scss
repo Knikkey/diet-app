@@ -54,14 +54,8 @@
 
 .bmr-container {
   @include grow-box;
-}
 
-.result-message {
-  font-size: var(--large-font-size);
-
-  span {
-    color: blue;
-    font-size: var(--xl-font-size);
-    font-weight: bold;
+  .result-message {
+    @include result-message;
   }
 }
