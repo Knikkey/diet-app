@@ -4,5 +4,6 @@
   @include section;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 1rem;
   background-color: var(--emerald);
 }
