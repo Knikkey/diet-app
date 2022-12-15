@@ -1,7 +1,11 @@
 @import "../../vars";
 
-.tdeeText-container {
+.calcText-container {
   font-size: var(--high-mid-font-size);
+
+  p {
+    animation: fade 1s;
+  }
 
   span {
     @include emp;
@@ -17,9 +21,5 @@
     &:nth-child(3) {
       color: blue;
     }
-  }
-
-  .text {
-    animation: fade 1s;
   }
 }

@@ -1,0 +1,40 @@
+:root {
+  --box-shadow: 1px 2px 8px #999;
+  --box-shadow--light: 1px 2px 8px #bbb;
+  --transparent: rgba(0, 0, 0, 0);
+  --small-font-size: 1.4rem;
+  --low-mid-font-size: 1.6rem;
+  --mid-font-size: 1.8rem;
+  --high-mid-font-size: 2rem;
+  --large-font-size: 2.4rem;
+  --xl-font-size: 2.8rem;
+  --subtitle-font-size: 3.2rem;
+  --title-font-size: 4.8rem;
+  --sky-blue: #a9dfd8;
+  --pastel-green: #cce4d4;
+  --emerald: #85dac5;
+  --deep-green: #88cbc0;
+  --yellow: #e4f7d0;
+  --pastel-blue: #bcd8cf;
+  --grey-green: #94b7ad;
+}
+
+.calcText-container {
+  font-size: var(--high-mid-font-size);
+}
+.calcText-container p {
+  animation: fade 1s;
+}
+.calcText-container span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.calcText-container .food-comparison {
+  text-decoration: none;
+}
+.calcText-container .food-comparison:nth-child(2) {
+  color: red;
+}
+.calcText-container .food-comparison:nth-child(3) {
+  color: blue;
+}/*# sourceMappingURL=CalcText.module.css.map */
